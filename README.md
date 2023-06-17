@@ -1,24 +1,30 @@
-# README
+# サイト名
+<buildnote>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## サイト概要
+### サイトテーマ
+<buildnoteは、トレーニングを行う人向けに特化した記録系SNSサイトです。トレーニングの記録管理により、トレーニングの成果をサポートし、同時にトレーニングを行うユーザー同士で交流することができます。>
 
-Things you may want to cover:
+### テーマを選んだ理由
+<私がこのテーマを選んだ理由は、２つあります。まず第一に、トレーニングの成果を可視化できるサイトがあれば良いと考えたからです。私自身もトレーニングを行っており、普段はメモ帳にトレーニングのセット数や回数を記録していましたが、より明確なトレーニング成果をグラフなどで可視化できれば助かると感じました。
+２つ目に、トレーニングに特化したSNSが必要だと思ったからです。一般的なSNSでは、鍛えた体やトレーニングの成果を投稿することに抵抗感を感じる人もいますが、トレーニングに特化したSNSであれば、筋トレやフィットネスに対する共通の関心や目的を持つ人々が集まります。鍛えた体やトレーニングの成果を自然に共有することができます。>
 
-* Ruby version
+### ターゲットユーザ
+<トレーニングを行う人>
 
-* System dependencies
+### 主な利用シーン
+<トレーニングを行う際やトレーニングを行う人同士で交流したい時など>
 
-* Configuration
+## 設計書
+<...>
 
-* Database creation
+## 開発環境
+- OS：Linux(CentOS)
+- 言語：HTML,CSS,JavaScript,Ruby,SQL
+- フレームワーク：Ruby on Rails
+- JSライブラリ：jQuery
+- IDE：Cloud9
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 使用素材
+- 外部サービスの画像素材・音声素材を使用した場合は、必ずサービス名とURLを明記してください。
+- 使用しない場合は、使用素材の項目をREADMEから削除してください。

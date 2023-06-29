@@ -4,13 +4,13 @@
 </p>
 
 <p align="center">
-Application for Portfolio 💪💪💪
+Application for Portfolio 💪
 </p>
 
 <p align="center">
-<img src="https://img.shields.io/badge/SNS%E7%B3%BB-ff0000" alt="SNS系">
-<img src="https://img.shields.io/badge/%E8%A8%98%E9%8C%B2%E7%B3%BB-ff4500" alt="記録系">
-<img src="https://img.shields.io/badge/themes-ff6347" alt="テーマ">
+<img src="https://img.shields.io/badge/SNS%E7%B3%BB-ffd700" alt="SNS系">
+<img src="https://img.shields.io/badge/%E8%A8%98%E9%8C%B2%E7%B3%BB-ffd700" alt="記録系">
+<img src="https://img.shields.io/badge/themes-ffd700" alt="テーマ">
 <br>
 <img src="https://img.shields.io/badge/-Linux-6C6694.svg?logo=linux&style=flat" alt="Linux">
 <img src="https://img.shields.io/badge/-HTML-333.svg?logo=html5&style=flat" alt="HTML">

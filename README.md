@@ -20,9 +20,10 @@ Application for Portfolio 💪
 <img src="https://img.shields.io/badge/SQL-4479A1" alt="SQL">
 <img src="https://img.shields.io/badge/-jQuery-0769AD.svg?logo=jquery&style=flat" alt="jQuery">
 <img src="https://img.shields.io/badge/Cloud9-blue" alt="Cloud9">
+<br>
+<img src="https://img.shields.io/badge/Created%20by-yusukeee811-blue?logo=github">
 </p>
 
-#
 ## サイト概要
 ### サイトテーマ
 buildnoteは、トレーニングを行う人向けに特化した記録系SNSサイトです。<br>
@@ -45,13 +46,5 @@ buildnoteは、トレーニングを行う人向けに特化した記録系SNS�
 ## 設計書
 <...>
 
-## 開発環境
-- OS：Linux(CentOS)
-- 言語：HTML,CSS,JavaScript,Ruby,SQL
-- フレームワーク：Ruby on Rails
-- JSライブラリ：jQuery
-- IDE：Cloud9
-
 ## 使用素材
-- 外部サービスの画像素材・音声素材を使用した場合は、必ずサービス名とURLを明記してください。
-- 使用しない場合は、使用素材の項目をREADMEから削除してください。
+- [ロゴジェネレーター](https://www.shopify.com/jp/tools/logo-maker)

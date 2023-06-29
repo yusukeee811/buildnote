@@ -1,3 +1,28 @@
+<br>
+<p align="center">
+<img src="app/assets/images/buildnote/linkedin_banner_image_2.png" alt="buildnote" height="100" width="250">
+</p>
+
+<p align="center">
+Application for Portfolio 💪💪💪
+</p>
+
+<p align="center">
+![Static Badge](https://img.shields.io/badge/SNS%E7%B3%BB-%234169e1)
+![Static Badge](https://img.shields.io/badge/%E8%A8%98%E9%8C%B2%E7%B3%BB-%234169e1)
+![Static Badge](https://img.shields.io/badge/themes-%2300bfff)
+<br>
+![Static Badge](https://img.shields.io/badge/-Linux-6C6694.svg?logo=linux&style=flat)
+![Static Badge](https://img.shields.io/badge/-HTML-333.svg?logo=html5&style=flat)
+![Static Badge](https://img.shields.io/badge/-CSS-1572B6.svg?logo=css3&style=flat)
+![Static Badge](https://img.shields.io/badge/Javascript-276DC3.svg?logo=javascript&style=flat)
+![Static Badge](https://img.shields.io/badge/-Ruby%203.1.2p20-CC342D.svg?logo=Ruby&style=flat)
+![Static Badge](https://img.shields.io/badge/SQL-4479A1)
+![Static Badge](https://img.shields.io/badge/-jQuery-0769AD.svg?logo=jquery&style=flat)
+![Static Badge](https://img.shields.io/badge/Cloud9-blue)
+</p>
+
+
 # サイト名 buildnote
 
 ## サイト概要

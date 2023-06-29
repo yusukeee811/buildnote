@@ -21,7 +21,9 @@ Application for Portfolio 💪
 <img src="https://img.shields.io/badge/-jQuery-0769AD.svg?logo=jquery&style=flat" alt="jQuery">
 <img src="https://img.shields.io/badge/Cloud9-blue" alt="Cloud9">
 <br>
+<a href="https://github.com/yusukeee811">
 <img src="https://img.shields.io/badge/Created%20by-yusukeee811-blue?logo=github">
+</a>
 </p>
 
 ## サイト概要

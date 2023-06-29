@@ -8,9 +8,9 @@ Application for Portfolio 💪💪💪
 </p>
 
 <p align="center">
-<img src="https://img.shields.io/badge/SNS%E7%B3%BB-%234169e1" alt="SNS系">
-<img src="https://img.shields.io/badge/%E8%A8%98%E9%8C%B2%E7%B3%BB-%234169e1" alt="記録系">
-<img src="https://img.shields.io/badge/themes-%2300bfff" alt="テーマ">
+<img src="https://img.shields.io/badge/SNS%E7%B3%BB-ff0000" alt="SNS系">
+<img src="https://img.shields.io/badge/%E8%A8%98%E9%8C%B2%E7%B3%BB-ff4500" alt="記録系">
+<img src="https://img.shields.io/badge/themes-ff6347" alt="テーマ">
 <br>
 <img src="https://img.shields.io/badge/-Linux-6C6694.svg?logo=linux&style=flat" alt="Linux">
 <img src="https://img.shields.io/badge/-HTML-333.svg?logo=html5&style=flat" alt="HTML">
@@ -22,9 +22,7 @@ Application for Portfolio 💪💪💪
 <img src="https://img.shields.io/badge/Cloud9-blue" alt="Cloud9">
 </p>
 
-
-# サイト名 buildnote
-
+#
 ## サイト概要
 ### サイトテーマ
 buildnoteは、トレーニングを行う人向けに特化した記録系SNSサイトです。<br>

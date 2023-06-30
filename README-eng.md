@@ -49,4 +49,4 @@ Individuals engaged in training and exercise.
 <...>
 
 ## Materials Used
-- [Logo Generator](https://www.shopify.com/jp/tools/logo-maker)
+- [logo-maker](https://www.shopify.com/jp/tools/logo-maker)

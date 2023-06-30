@@ -28,7 +28,7 @@ Application for Portfolio 💪
 
 ## Site Overview <span style="font-weight: normal; font-size: 60%;">[ [Japanese](README.md) | English ]</span>
 ### Site Theme
-"buildnote" is a specialized record-keeping SNS site designed for individuals engaged in training activities.
+"buildnote" is a specialized record-keeping SNS site designed for individuals engaged in training activities. <br>
 It supports tracking and managing training records, facilitating the visualization of training progress, and fostering interaction among users engaged in training.
 
 ### Reasons for Choosing the Theme

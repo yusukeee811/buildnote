@@ -31,7 +31,8 @@ Application for Portfolio 💪
 </a>
 </p>
 
-## Site Overview <span style="font-weight: normal; font-size: 60%;">[ [Japanese](README.md) | English ]</span>
+[ [Japanese](README.md) | English ]
+## Site Overview
 ### Site Theme
 "<b>buildnote</b>" is a specialized record-keeping SNS site designed for individuals engaged in training activities. <br>
 It supports tracking and managing training records, facilitating the visualization of training progress, and fostering interaction among users engaged in training.
@@ -47,8 +48,50 @@ It supports tracking and managing training records, facilitating the visualizati
 Individuals engaged in training and exercise.
 
 ### Key Usage Scenarios
-- Tracking and managing training records <br>
+- Tracking and managing training records
 - Interacting and sharing information among individuals engaged in training
+
+## Implemented Features
+### Guest Login
+- To allow users to try the app before registering and lower the barrier to registration.
+
+### User Registration
+- To identify the author of each post.
+- To display customized information such as timeline, follow/follower information for each user.
+
+### Post Creation
+- To enable users to create and share their desired content.
+
+### Post Search (Hashtag Search)
+- To allow users to check posts related to topics of interest.
+
+### User Management (Admin)
+- To view a list of users and their registration details.
+- To suspend the accounts of users who registered through unauthorized means or engage in inappropriate posts.
+
+### Like (Bookmark) Feature
+- To react to and bookmark posts that users like or want to save.
+
+### Liked (Bookmarked) Posts List Display
+- To view posts that have been liked (bookmarked) at any time.
+
+### Follow Feature
+- To follow acquaintances or users who post interesting content and obtain desired information.
+
+### Comment Feature
+- To react to posts of interest and foster communication.
+
+### User Search Feature
+- To search for acquaintances and users to follow.
+
+### Training Record Management Feature
+- To input and save training data such as sets, repetitions, and weights.
+
+### Graph Feature
+- To visualize training progress and results.
+
+### Calendar Feature
+- To visualize training days and track consistency in training.
 
 ## Design Documents
 <...>

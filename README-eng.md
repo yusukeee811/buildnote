@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-Application for Portfolio 💪
+Application for Portfolio
 </p>
 
 <p align="center">
@@ -32,7 +32,7 @@ Application for Portfolio 💪
 
 [ [Japanese](README.md) | English ]
 ## Site Overview
-### Site Theme⚡️
+### Site Theme
 "<b>buildnote</b>" is a specialized record-keeping SNS site designed for individuals engaged in training activities. <br>
 It supports tracking and managing training records, facilitating the visualization of training progress, and fostering interaction among users engaged in training.
 

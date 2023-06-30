@@ -1,9 +1,9 @@
 <p align="center">
-ポートフォリオ用のアプリケーション 💪
+<img src="app/assets/images/buildnote/linkedin_banner_image_2.png" alt="buildnote">
 </p>
 
 <p align="center">
-<img src="app/assets/images/buildnote/linkedin_banner_image_2.png" alt="buildnote">
+ポートフォリオ用のアプリケーション 💪
 </p>
 
 <p align="center">

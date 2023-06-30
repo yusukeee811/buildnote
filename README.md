@@ -23,6 +23,8 @@
 <img src="https://img.shields.io/badge/-Font%20Awesome-528DD7.svg?logo=fontawesome&style=flat" alt="Font Awesome">
 <img src="https://img.shields.io/badge/-jQuery-0769AD.svg?logo=jquery&style=flat" alt="jQuery">
 <img src="https://img.shields.io/badge/Cloud9-blue" alt="Cloud9">
+<img src="https://img.shields.io/badge/-Amazon%20EC2-FF9900.svg?logo=amazonec2&style=flat" alt="Amazon EC2">
+<img src="https://img.shields.io/badge/-Amazon%20RDS-527FFF.svg?logo=amazonrds&style=flat" alt="Amazon RDS">
 <br>
 <a href="https://github.com/yusukeee811">
 <img src="https://img.shields.io/badge/Created%20by-yusukeee811-blue?logo=github" alt="開発者リンク">

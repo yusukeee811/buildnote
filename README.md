@@ -4,13 +4,13 @@
 </p>
 
 <p align="center">
-Application for Portfolio 💪
+ポートフォリオ用のアプリケーション 💪
 </p>
 
 <p align="center">
+<img src="https://img.shields.io/badge/テーマ-ffd700" alt="テーマ">
 <img src="https://img.shields.io/badge/SNS%E7%B3%BB-ffd700" alt="SNS系">
 <img src="https://img.shields.io/badge/%E8%A8%98%E9%8C%B2%E7%B3%BB-ffd700" alt="記録系">
-<img src="https://img.shields.io/badge/themes-ffd700" alt="テーマ">
 <br>
 <img src="https://img.shields.io/badge/-Linux-6C6694.svg?logo=linux&style=flat" alt="Linux">
 <img src="https://img.shields.io/badge/-HTML-333.svg?logo=html5&style=flat" alt="HTML">
@@ -22,13 +22,13 @@ Application for Portfolio 💪
 <img src="https://img.shields.io/badge/Cloud9-blue" alt="Cloud9">
 <br>
 <a href="https://github.com/yusukeee811">
-<img src="https://img.shields.io/badge/Created%20by-yusukeee811-blue?logo=github">
+<img src="https://img.shields.io/badge/Created%20by-yusukeee811-blue?logo=github" alt="開発者リンク">
 </a>
 </p>
 
-## サイト概要
+## サイト概要 <span style="font-weight: normal; font-size: 60%;">[ 日本語版 | [English](README-eng.md) ]</span>
 ### サイトテーマ
-buildnoteは、トレーニングを行う人向けに特化した記録系SNSサイトです。<br>
+『<b>buildnote</b>』は、トレーニングを行う人向けに特化した記録系SNSサイトです。<br>
 トレーニングの記録管理により、トレーニングの成果をサポートし、同時にトレーニングを行うユーザー同士で交流することができます。
 
 ### テーマを選んだ２つの理由
@@ -43,7 +43,7 @@ buildnoteは、トレーニングを行う人向けに特化した記録系SNS�
 
 ### 主な利用シーン
 - トレーニングを行う際の記録管理<br>
-- トレーニングを行う人同士での交流と情報共有 etc...
+- トレーニングを行う人同士での交流と情報共有
 
 ## 設計書
 <...>

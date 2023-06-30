@@ -57,7 +57,7 @@ Individuals engaged in training and exercise.
 - <b>Post Search (Hashtag Search)</b> - Enables users to check posts related to topics of interest.
 - <b>User Management (Admin)</b> - Allows administrators to view a list of members and their registration details. Can suspend the usage of members who registered using fraudulent means or engage in inappropriate posts.
 - <b>Like Feature</b> - Allows users to react to and bookmark posts they like or want to save.
-- <b>Liked Posts List Display</b> - Enables users to view bookmarked posts at any time.
+- <b>Liked Posts List Display</b> - Enables users to view likeed posts at any time.
 - <b>Follow Feature</b> - Users can follow acquaintances or people who post content of interest to receive the desired information.
 - <b>Comment Feature</b> - Users can react to posts of interest and promote communication.
 - <b>User Search Feature</b> - Users can search for acquaintances and follow them.

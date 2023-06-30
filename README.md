@@ -26,7 +26,7 @@
 </a>
 </p>
 
-<h2>サイト概要 <span style="font-weight: normal; font-size: 60%;">[ 日本語版 | [English](README-eng.md) ]</span></h2>
+## サイト概要 <span style="font-weight: normal; font-size: 60%;">[ 日本語版 | [English](README-eng.md) ]</span>
 ### サイトテーマ
 『<b>buildnote</b>』は、トレーニングを行う人向けに特化した記録系SNSサイトです。<br>
 トレーニングの記録管理により、トレーニングの成果をサポートし、同時にトレーニングを行うユーザー同士で交流することができます。

@@ -19,6 +19,8 @@
 <img src="https://img.shields.io/badge/-Ruby%203.1.2p20-CC342D.svg?logo=Ruby&style=flat" alt="Ruby">
 <img src="https://img.shields.io/badge/SQL-4479A1" alt="SQL">
 <img src="https://img.shields.io/badge/-Rails%206.1.7.3-CC0000.svg?logo=rubyonrails&style=flat" alt="Rails">
+<img src="https://img.shields.io/badge/-Bootstrap-563D7C.svg?logo=bootstrap&style=flat" alt="Bootstrap">
+<img src="https://img.shields.io/badge/-Font%20Awesome-528DD7.svg?logo=fontawesome&style=flat" alt="Font Awesome">
 <img src="https://img.shields.io/badge/-jQuery-0769AD.svg?logo=jquery&style=flat" alt="jQuery">
 <img src="https://img.shields.io/badge/Cloud9-blue" alt="Cloud9">
 <br>

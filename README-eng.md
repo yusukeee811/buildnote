@@ -52,46 +52,19 @@ Individuals engaged in training and exercise.
 - Interacting and sharing information among individuals engaged in training
 
 ## Implemented Features
-### Guest Login
-- To allow users to try the app before registering and lower the barrier to registration.
-
-### User Registration
-- To identify the author of each post.
-- To display customized information such as timeline, follow/follower information for each user.
-
-### Post Creation
-- To enable users to create and share their desired content.
-
-### Post Search (Hashtag Search)
-- To allow users to check posts related to topics of interest.
-
-### User Management (Admin)
-- To view a list of users and their registration details.
-- To suspend the accounts of users who registered through unauthorized means or engage in inappropriate posts.
-
-### Like (Bookmark) Feature
-- To react to and bookmark posts that users like or want to save.
-
-### Liked (Bookmarked) Posts List Display
-- To view posts that have been liked (bookmarked) at any time.
-
-### Follow Feature
-- To follow acquaintances or users who post interesting content and obtain desired information.
-
-### Comment Feature
-- To react to posts of interest and foster communication.
-
-### User Search Feature
-- To search for acquaintances and users to follow.
-
-### Training Record Management Feature
-- To input and save training data such as sets, repetitions, and weights.
-
-### Graph Feature
-- To visualize training progress and results.
-
-### Calendar Feature
-- To visualize training days and track consistency in training.
+- Guest Login - Allows users to try the application before registering, reducing the registration barrier.
+- User Registration - Clearly identifies the author of posts. Displays customized information such as timelines, follow/follower information for each member.
+- Post Creation - Allows members to publish their desired content.
+- Post Search (Hashtag Search) - Enables users to check posts related to topics of interest.
+- User Management (Admin) - Allows administrators to view a list of members and their registration details. Can suspend the usage of members who registered using fraudulent means or engage in inappropriate posts.
+- Like (Bookmark) Feature - Allows users to react to and bookmark posts they like or want to save.
+- Liked (Bookmarked) Posts List Display - Enables users to view bookmarked posts at any time.
+- Follow Feature - Users can follow acquaintances or people who post content of interest to receive the desired information.
+- Comment Feature - Users can react to posts of interest and promote communication.
+- User Search Feature - Users can search for acquaintances and follow them.
+- Training Record Management Feature - Users can input and save training data such as sets, repetitions, and weights.
+- Graph Feature - Creates graphs from training data to visualize training progress.
+- Calendar Feature - Visualizes training days to check if training is being consistently maintained.
 
 ## Design Documents
 <...>

@@ -16,7 +16,7 @@ Application for Portfolio
 <img src="https://img.shields.io/badge/-CSS-1572B6.svg?logo=css3&style=flat" alt="CSS">
 <img src="https://img.shields.io/badge/Javascript-276DC3.svg?logo=javascript&style=flat" alt="Javascript">
 <img src="https://img.shields.io/badge/-Ruby%203.1.2p20-CC342D.svg?logo=Ruby&style=flat" alt="Ruby">
-<img src="https://img.shields.io/badge/SQL-4479A1" alt="SQL">
+<img src="https://img.shields.io/badge/-MySQL-4479A1.svg?logo=mysql&style=flat" alt="MySQL">
 <img src="https://img.shields.io/badge/-Rails%206.1.7.3-CC0000.svg?logo=rubyonrails&style=flat" alt="Rails">
 <img src="https://img.shields.io/badge/-Bootstrap-563D7C.svg?logo=bootstrap&style=flat" alt="Bootstrap">
 <img src="https://img.shields.io/badge/-Font%20Awesome-fffafa.svg?logo=fontawesome&style=flat" alt="Font Awesome">

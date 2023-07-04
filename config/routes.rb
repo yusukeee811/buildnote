@@ -1,71 +1,45 @@
 Rails.application.routes.draw do
-  namespace :admin do
-    get 'posts/index'
-  end
-  namespace :admin do
-    get 'users/show'
-    get 'users/edit'
-    get 'users/update'
-    get 'users/withdraw'
-  end
-  namespace :admin do
-    get 'homes/top'
-  end
-  namespace :public do
-    get 'searches/users'
-    get 'searches/hashtags'
-    get 'searches/trainings'
-  end
-  namespace :public do
-    get 'trainings/index'
-    get 'trainings/new'
-    get 'trainings/create'
-    get 'trainings/edit'
-    get 'trainings/update'
-    get 'trainings/destroy'
-  end
-  namespace :public do
-    get 'post_comments/create'
-    get 'post_comments/destroy'
-  end
-  namespace :public do
-    get 'post_likes/index'
-    get 'post_likes/create'
-    get 'post_likes/destroy'
-  end
-  namespace :public do
-    get 'posts/index'
-    get 'posts/show'
-    get 'posts/new'
-    get 'posts/create'
-    get 'posts/edit'
-    get 'posts/update'
-    get 'posts/destroy'
-  end
-  namespace :public do
-    get 'relationships/followings'
-    get 'relationships/followers'
-    get 'relationships/create'
-    get 'relationships/destroy'
-  end
-  namespace :public do
-    get 'users/show'
-    get 'users/edit'
-    get 'users/update'
-    get 'users/confirm'
-    get 'users/withdraw'
-  end
-  namespace :public do
-    get 'homes/top'
-  end
+
   devise_for :users, controllers: {
     registrations: 'public/registrations',
     sessions: 'public/sessions'
   }
 
-  devise_for :admins, skip: [:registrations, :passwords] ,controllers: {
+  devise_for :admins, skip: [:registrations, :passwords] , controllers: {
     sessions: 'admin/sessions'
   }
+
+  scope module: :public do
+    root to: 'homes#top'
+
+    get 'users/:name/unsubscribe'            => 'users#unsubscribe',        as: 'users_unsubscribe'
+    get 'users/:name/withdraw'               => 'users#withdraw',           as: 'users_withdraw'
+    resources :users, param: :name, only:[:show, :edit, :update] do
+      get 'followings'                       => 'relationships#followings', as: 'followings'
+      get 'followers'                        => 'relationships#followers',  as: 'followers'
+      resources :relationships, only:[:create, :destroy]
+      get 'user_search'                      => 'searches#user_search',     as: 'user_search'
+      resources :post_likes, only:[:index]
+    end
+
+    resources :posts, only:[:index, :show, :new, :create, :edit, :update, :destroy] do
+      resources :post_likes, only:[:create, :destroy]
+      resources :post_comments, only:[:create, :destroy]
+    end
+
+    get 'posts/:post_hashtag/hashtag_search' => 'searches#hashtag_search',  as: 'hashtag_search'
+
+    resources :trainings, only:[:index, :new, :create, :edit, :update, :destroy] do
+      get 'training_search'                  => 'searches#training_search', as: 'training_search'
+    end
+  end
+
+  namespace :admin do
+    root to: 'homes#top'
+    get 'users/:name/withdraw'               => 'users#withdraw',           as: 'users_withdraw'
+    resources :users, param: :name, only:[:show, :edit, :update]
+    resources :posts, only:[:index]
+  end
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

@@ -1,10 +1,10 @@
 class Public::SearchesController < ApplicationController
-  def users
+  def user_search
   end
 
-  def hashtags
+  def hashtag_search
   end
 
-  def trainings
+  def training_search
   end
 end

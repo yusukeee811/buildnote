@@ -8,7 +8,7 @@ class Public::UsersController < ApplicationController
   def update
   end
 
-  def confirm
+  def unsubscribe
   end
 
   def withdraw

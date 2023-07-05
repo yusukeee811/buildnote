@@ -65,7 +65,7 @@ Individuals engaged in training and exercise.
 - 📊 <b>Graph Feature</b> - Creates graphs from training data to visualize training progress.
 - 🗓 <b>Calendar Feature</b> - Visualizes training days to check if training is being consistently maintained.
 
-# Design Documents
+# Design
 ## Screen Design
 ### UI Flows
 - User Side

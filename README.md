@@ -31,7 +31,7 @@
 </p>
 
 [ 日本語版 | [English](README-eng.md) ]
-## サイト概要
+# サイト概要
 ### サイトテーマ
 『<b>buildnote</b>』は、トレーニングを行う人向けに特化した記録系SNSサイトです。<br>
 トレーニングの記録管理により、トレーニングの成果をサポートし、同時にトレーニングを行うユーザー同士で交流することができます。
@@ -50,7 +50,7 @@
 - トレーニングを行う際の記録管理
 - トレーニングを行う人同士での交流と情報共有
 
-## 実装機能
+# 実装機能
 - <b>ゲストログイン</b>🚪 <br> 会員登録前にまずは試しに使えるようにし、登録のハードルを下げます。
 - <b>会員機能</b>👥  <br> 投稿がどの会員によるものか明らかにします。タイムライン、フォロー・フォロワー情報など、会員ごとにカスタマイズされた情報を表示します。
 - <b>投稿機能</b>📸 <br> 会員が発信したい内容を発信できます。
@@ -65,8 +65,42 @@
 - <b>グラフ機能</b>📊  <br> トレーニングデータからグラフを作成し、トレーニング成果を可視化することができます。
 - <b>カレンダー機能</b>🗓️ <br> トレーニング日を可視化し、継続的にトレーニングができているか確認できます。
 
-## 設計書
-<...>
+# 設計書
+## 画面設計
+### 画面遷移図
+- 会員側
 
-## 使用素材
+<p align="center">
+<img src="app/assets/images/UI_Flows/UIFlows_user.jpg" alt="UI Flows User">
+</p>
+
+- 管理者側
+
+<p align="center">
+<img src="app/assets/images/UI_Flows/UIFlows_admin.jpg" alt="UI Flows Admin">
+</p>
+
+### ワイヤーフレーム
+- 会員側 <br>
+[ワイヤーフレーム](app/assets/pdf/Wire_frame/wireframe_user.pdf)
+
+- 管理者側 <br>
+[ワイヤーフレーム](app/assets/pdf/Wire_frame/wireframe_admin.pdf)
+
+## データベース設計
+### ER図
+
+<p align="center">
+<img src="app/assets/images/ER_diagram/ER_diagram.jpg" alt="ER diagram">
+</p>
+
+### テーブル定義書
+[テーブル定義書](https://docs.google.com/spreadsheets/d/1eoqDMm04hEqI0XbXiWhPfNqwQ6nZfI0DdmKXfF4AtBg/edit?usp=sharing)
+
+## 詳細設計
+### アプリケーション詳細設計書
+
+[アプリケーション詳細設計書](https://docs.google.com/spreadsheets/d/15XIUHg1zwqNAPrMz759BzxNL3kP_FmTqh-AW7rmOd30/edit?usp=sharing)
+
+# 使用素材
 - [ロゴジェネレーター](https://www.shopify.com/jp/tools/logo-maker)

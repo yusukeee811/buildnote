@@ -31,7 +31,7 @@ Application for Portfolio
 </p>
 
 [ [Japanese](README.md) | English ]
-## Site Overview
+# Site Overview
 ### Site Theme
 "<b>buildnote</b>" is a specialized record-keeping SNS site designed for individuals engaged in training activities. <br>
 It supports tracking and managing training records, facilitating the visualization of training progress, and fostering interaction among users engaged in training.
@@ -50,7 +50,7 @@ Individuals engaged in training and exercise.
 - Tracking and managing training records
 - Interacting and sharing information among individuals engaged in training
 
-## Implemented Features
+# Implemented Features
 - 🚪 <b>Guest Login</b> - Allows users to try the application before registering, reducing the registration barrier.
 - 👥 <b>User Registration</b> - Clearly identifies the author of posts. Displays customized information such as timelines, follow/follower information for each member.
 - 📸 <b>Post Creation </b>- Allows members to publish their desired content.
@@ -65,8 +65,42 @@ Individuals engaged in training and exercise.
 - 📊 <b>Graph Feature</b> - Creates graphs from training data to visualize training progress.
 - 🗓 <b>Calendar Feature</b> - Visualizes training days to check if training is being consistently maintained.
 
-## Design Documents
-<...>
+# Design Documents
+## Screen Design
+### UI Flows
+- User Side
 
-## Materials Used
+<p align="center">
+<img src="app/assets/images/UI_Flows/UIFlows_user.jpg" alt="UI Flows User">
+</p>
+
+- Admin Side
+
+<p align="center">
+<img src="app/assets/images/UI_Flows/UIFlows_admin.jpg" alt="UI Flows Admin">
+</p>
+
+### Wireframes
+- 会員側 <br>
+[Wireframe](app/assets/pdf/Wire_frame/wireframe_user.pdf)
+
+- 管理者側 <br>
+[Wireframe](app/assets/pdf/Wire_frame/wireframe_admin.pdf)
+
+## Database Design
+### ER Diagram
+
+<p align="center">
+<img src="app/assets/images/ER_diagram/ER_diagram.jpg" alt="ER diagram">
+</p>
+
+### Table Definitions
+[Google spreadsheets](https://docs.google.com/spreadsheets/d/1eoqDMm04hEqI0XbXiWhPfNqwQ6nZfI0DdmKXfF4AtBg/edit?usp=sharing)
+
+## Detailed Design
+### Application Detailed Design Document
+
+[Google spreadsheets](https://docs.google.com/spreadsheets/d/15XIUHg1zwqNAPrMz759BzxNL3kP_FmTqh-AW7rmOd30/edit?usp=sharing)
+
+# Materials Used
 - [logo-maker](https://www.shopify.com/jp/tools/logo-maker)

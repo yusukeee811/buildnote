@@ -29,6 +29,7 @@ Rails.application.routes.draw do
 
     get 'posts/:post_hashtag/hashtag_search' => 'searches#hashtag_search',  as: 'hashtag_search'
 
+    get 'trainings/graph'                    => 'trainings#graph',          as: 'trainings_graph'
     resources :trainings, only:[:index, :new, :create, :edit, :update, :destroy] do
       get 'training_search'                  => 'searches#training_search', as: 'training_search'
     end

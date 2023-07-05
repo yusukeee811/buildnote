@@ -19,8 +19,8 @@
 <img src="https://img.shields.io/badge/-MySQL-4479A1.svg?logo=mysql&style=flat" alt="MySQL">
 <img src="https://img.shields.io/badge/-Rails%206.1.7.3-CC0000.svg?logo=rubyonrails&style=flat" alt="Rails">
 <img src="https://img.shields.io/badge/-Bootstrap-563D7C.svg?logo=bootstrap&style=flat" alt="Bootstrap">
-<img src="https://img.shields.io/badge/-Font%20Awesome-fffafa.svg?logo=fontawesome&style=flat" alt="Font Awesome">
-<img src="https://img.shields.io/badge/-jQuery-0769AD.svg?logo=jquery&style=flat" alt="jQuery">
+<img src="https://img.shields.io/badge/-Font%20Awesome%205.15.4-fffafa.svg?logo=fontawesome&style=flat" alt="Font Awesome">
+<img src="https://img.shields.io/badge/-jQuery%203.7.0-0769AD.svg?logo=jquery&style=flat" alt="jQuery">
 <img src="https://img.shields.io/badge/Amazon%20Cloud9-blue" alt="Amazon Cloud9">
 <img src="https://img.shields.io/badge/-Amazon%20EC2-ff4500.svg?logo=amazonec2&style=flat" alt="Amazon EC2">
 <img src="https://img.shields.io/badge/-Amazon%20RDS-000080.svg?logo=amazonrds&style=flat" alt="Amazon RDS">

@@ -1,14 +1,53 @@
 <header>
-  <% if user_signed_in? %>
-    <li>
-      <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-    </li>
-  <% else %>
-    <li>
-      <%= link_to "新規登録", new_user_registration_path %>
-    </li>
-    <li>
-      <%= link_to "ログイン", new_user_session_path %>
-    </li>
-  <% end %>
+
+  <nav class="navbar d-flex">
+    <div class="container">
+    <a class="navbar-brand mx-auto mt-3" href="<%= user_signed_in? ? posts_path : root_path %>">
+      <%= image_tag "buildnote/logo.png", style: "width: 40px; height: auto;" %>
+    </a>
+    <ul class="navbar-nav m-auto">
+      <% if user_signed_in? %>
+      <li class="nav-item">
+        <%= link_to user_user_search_path do %>
+          <i class="fas fa-search fa-lg" data-toggle="tooltip" title="検索"></i>
+        <% end %>
+      </li>
+      <li class="nav-item">
+        <%= link_to trainings_path do %>
+          <i class="fas fa-calendar-alt fa-lg" data-toggle="tooltip" title="データ入力"></i>
+        <% end %>
+      </li>
+      <li class="nav-item">
+        <%= link_to trainings_graph_path do %>
+          <i class="fas fa-chart-line fa-lg" data-toggle="tooltip" title="グラフ"></i>
+        <% end %>
+      </li>
+      <li class="nav-item">
+        <%= link_to user_post_likes_path do %>
+          <i class="fas fa-heart fa-lg" data-toggle="tooltip" title="いいね一覧"></i>
+        <% end %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "画像", user_path(current_user) %>
+      </li>
+      <li class="nav-item">
+        <%= link_to destroy_user_session_path, method: :delete do %>
+          <i class="fas fa-sign-out-alt fa-lg" data-toggle="tooltip" title="ログアウト"></i>
+         <% end %>
+      </li>
+      <% else %>
+      <li class="nav-item my-auto">
+        <%= link_to new_user_session_path do %>
+          <i class="fas fa-sign-in-alt fa-lg" data-toggle="tooltip" title="ログイン"></i>
+        <% end %>
+      <li class="nav-item my-auto">
+        <%= link_to new_user_registration_path do %>
+          <i class="fas fa-user-plus fa-lg" data-toggle="tooltip" title="新規登録"></i>
+        <% end %>
+      </li>
+      <% end %>
+    </ul>
+
+  </nav>
+  </div>
 </header>

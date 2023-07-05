@@ -81,11 +81,9 @@ Individuals engaged in training and exercise.
 </p>
 
 ### Wireframes
-- 会員側 <br>
-[Wireframe](app/assets/pdf/Wire_frame/wireframe_user.pdf)
+- User Side - [Wireframe](app/assets/pdf/Wire_frame/wireframe_user.pdf)
 
-- 管理者側 <br>
-[Wireframe](app/assets/pdf/Wire_frame/wireframe_admin.pdf)
+- Admin Side - [Wireframe](app/assets/pdf/Wire_frame/wireframe_admin.pdf)
 
 ## Database Design
 ### ER Diagram

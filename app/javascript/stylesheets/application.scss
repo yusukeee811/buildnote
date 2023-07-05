@@ -13,7 +13,7 @@ header {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  border-color: #3A4750;
+  border-right: 1px solid #3A4750;
 }
 
 .container {
@@ -25,4 +25,20 @@ header {
 main {
   flex: 1;
   overflow-y: auto;
+}
+
+.navbar {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: initial;  //これがないと自動で justify-content: space-between;されてしまう。
+}
+
+.navbar-nav {
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.navbar-nav .nav-item:last-child {
+  margin-top: auto;
 }

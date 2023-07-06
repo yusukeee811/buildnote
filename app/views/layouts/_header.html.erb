@@ -1,54 +1,81 @@
 <header>
   <nav class="navbar">
-      <a class="navbar-brand mx-auto mt-3 mb-5" href="<%= user_signed_in? ? posts_path : root_path %>">
-        <%= image_tag "buildnote/logo.png", style: "width: 30px; height: auto;" %>
-      </a>
-      <ul class="navbar-nav">
-        <% if user_signed_in? %>
-        <li class="nav-item mt-5 mx-auto">
-          <%= link_to user_user_search_path(user_name: current_user.name), class: 'nav-link text-dark' do %>
-            <i class="fas fa-search fa-lg" data-toggle="tooltip" title="検索"></i>
-          <% end %>
-        </li>
-        <li class="nav-item mt-5 mx-auto">
-          <%= link_to trainings_path, class: 'nav-link text-dark' do %>
-            <i class="fas fa-calendar-alt fa-lg" data-toggle="tooltip" title="データ入力"></i>
-          <% end %>
-        </li>
-        <li class="nav-item mt-5 mx-auto">
-          <%= link_to trainings_graph_path, class: 'nav-link text-dark' do %>
-            <i class="fas fa-chart-line fa-lg" data-toggle="tooltip" title="グラフ"></i>
-          <% end %>
-        </li>
-        <li class="nav-item mt-5 mx-auto">
-          <%= link_to user_post_likes_path(user_name: current_user.name), class: 'nav-link text-dark' do %>
-            <i class="fas fa-heart fa-lg" data-toggle="tooltip" title="いいね一覧"></i>
-          <% end %>
-        </li>
-        <li class="nav-item mt-5 mx-auto">
-          <%= link_to "画像", user_path(name: current_user.name), class: 'nav-link text-dark' %>
-        </li>
-        <li class="nav-item mx-auto">
-          <%= link_to destroy_user_session_path, method: :delete, class: 'nav-link text-dark' do %>
-            <i class="fas fa-sign-out-alt fa-lg" data-toggle="tooltip" title="ログアウト"></i>
-           <% end %>
-        </li>
-        <% else %>
-        <li class="nav-item mt-5 mx-auto">
-          <%= link_to new_user_session_path, class: 'nav-link text-dark' do %>
-            <i class="fas fa-sign-in-alt fa-lg" data-toggle="tooltip" title="ログイン"></i>
-          <% end %>
-        <li class="nav-item my-5 mx-auto">
-          <%= link_to new_user_registration_path, class: 'nav-link text-dark' do %>
-            <i class="fas fa-user-plus fa-lg" data-toggle="tooltip" title="新規登録"></i>
-          <% end %>
-        </li>
-        <li class="nav-item mx-auto">
-          <%= link_to "https://github.com/yusukeee811/buildnote", target: "_blank", class: 'nav-link text-dark' do %>
-            <i class="fab fa-github-square fa-2x" data-toggle="tooltip" title="builnoteのGithub"></i>
-          <% end %>
-        </li>
+    <a class="navbar-brand mx-auto mt-3 mb-5 text-dark" href="<%= user_signed_in? ? posts_path : root_path %>">
+      buildnote
+    </a>
+    <ul class="navbar-nav">
+      <% if user_signed_in? %>
+      <li class="nav-item mt-5 ml-0">
+        <%= link_to user_user_search_path(user_name: current_user.name), class: 'nav-link text-dark' do %>
+          <i class="fas fa-search fa-lg"></i>
+          <span class="ml-2">
+            検索
+          </span>
         <% end %>
-      </ul>
+      </li>
+      <li class="nav-item mt-5 ml-0">
+        <%= link_to trainings_path, class: 'nav-link text-dark' do %>
+          <i class="fas fa-calendar-alt fa-lg"></i>
+          <span class="ml-2">
+            データ入力
+          </span>
+        <% end %>
+      </li>
+      <li class="nav-item mt-5 ml-0">
+        <%= link_to trainings_graph_path, class: 'nav-link text-dark' do %>
+          <i class="fas fa-chart-line fa-lg"></i>
+          <span class="ml-2">
+            グラフ
+          </span>
+        <% end %>
+      </li>
+      <li class="nav-item mt-5 ml-0">
+        <%= link_to user_post_likes_path(user_name: current_user.name), class: 'nav-link text-dark' do %>
+          <i class="fas fa-heart fa-lg"></i>
+          <span class="ml-2">
+            いいね一覧
+          </span>
+        <% end %>
+      </li>
+      <li class="nav-item mt-5 ml-0">
+        <%= link_to "画像", user_path(name: current_user.name), class: 'nav-link text-dark' %>
+        <span class="ml-2">
+          プロフィール
+        </span>
+      </li>
+      <li class="nav-item ml-0">
+        <%= link_to destroy_user_session_path, method: :delete, class: 'nav-link text-dark' do %>
+          <i class="fas fa-sign-out-alt fa-lg"></i>
+          <span class="ml-2">
+            ログアウト
+          </span>
+        <% end %>
+      </li>
+      <% else %>
+      <li class="nav-item mt-5 ml-0">
+        <%= link_to new_user_session_path, class: 'nav-link text-dark' do %>
+          <i class="fas fa-sign-in-alt fa-lg"></i>
+          <span class="ml-2">
+            ログイン
+          </span>
+        <% end %>
+      <li class="nav-item my-5 ml-0">
+        <%= link_to new_user_registration_path, class: 'nav-link text-dark' do %>
+          <i class="fas fa-user-plus fa-lg"></i>
+          <span class="ml-2">
+            新規登録
+          </span>
+        <% end %>
+      </li>
+      <li class="nav-item ml-0">
+        <%= link_to "https://github.com/yusukeee811/buildnote", target: "_blank", class: 'nav-link text-dark d-flex align-items-center justify-content-center' do %>
+          <i class="fab fa-github-square fa-2x"></i>
+          <span class="ml-2">
+            GitHub
+          </span>
+        <% end %>
+      </li>
+      <% end %>
+    </ul>
   </nav>
 </header>

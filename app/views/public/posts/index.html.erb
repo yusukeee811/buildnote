@@ -1,2 +1,19 @@
-<h1>Public::Posts#index</h1>
-<p>Find me in app/views/public/posts/index.html.erb</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-5 mx-auto">
+      <h4 class="py-4 mb-0">
+        <span class="ml-3 font-weight-bold">
+          新規投稿
+        </span>
+      </h4>
+      <% @posts.each do |post| %>
+        <div class="card rounded">
+          <%= image_tag post.get_image, class: "card-img-top" %>
+        <div class="card-body">
+          <p class="card-text">Some quick example text </p>
+        </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

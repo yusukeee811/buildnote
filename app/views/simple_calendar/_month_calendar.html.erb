@@ -1,8 +1,8 @@
 <div class="simple-calendar">
-  <div class="calendar-heading">
-    <%= link_to t('simple_calendar.previous', default: '<'), calendar.url_for_previous_view %>
-    <span class="calendar-title"><%= start_date.year %>年 <%= t('date.month_names')[start_date.month] %> </span>
-    <%= link_to t('simple_calendar.next', default: '>'), calendar.url_for_next_view %>
+  <div class="calendar-heading mb-4">
+    <%= link_to t('simple_calendar.previous', default: '<'), calendar.url_for_previous_view, class: "btn btn-outline-dark previous-btn" %>
+    <span class="calendar-title mx-5 px-5"><%= start_date.year %>年 <%= t('date.month_names')[start_date.month] %> </span>
+    <%= link_to t('simple_calendar.next', default: '>'), calendar.url_for_next_view, class: "btn btn-outline-dark next-btn" %>
   </div>
 
   <table class="table table-striped">
@@ -18,7 +18,7 @@
       <% date_range.each_slice(7) do |week| %>
         <tr>
           <% week.each do |day| %>
-            <%= content_tag :td, class: calendar.td_classes_for(day) do %>
+            <%= content_tag :td, class: "#{calendar.td_classes_for(day)} #{'previous-month' if day.month != start_date.month} #{'next-month' if day.month != start_date.month}" do %>
               <% if defined?(Haml) && respond_to?(:block_is_haml?) && block_is_haml?(passed_block) %>
                 <% capture_haml(day, sorted_events.fetch(day, []), &passed_block) %>
               <% else %>

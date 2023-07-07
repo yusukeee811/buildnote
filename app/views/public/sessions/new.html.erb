@@ -1,6 +1,6 @@
-<div class="container mt-5 pt-5">
-  <div class="row mt-5">
-    <div class="col-md-5 mx-auto shadow-lg rounded px-0 mt-5">
+<div class="container">
+  <div class="row">
+    <div class="col-md-5 mx-auto shadow-lg rounded px-0 my-5">
       <h4 class="bg-light py-4 mb-0">
         <span class="ml-3 font-weight-bold">
           ログイン
@@ -28,7 +28,9 @@
       <% end %>
 
       <div class="form-group my-4 py-4 border-top border-bottom">
-        <%= f.submit "試しに使ってみる？", class: "btn btn-block btn-danger" %>
+        <%= link_to create_guest_path, method: :post, data: { confirm: 'ゲストユーザーとしてログインします。'}, class: "btn btn-block btn-danger" do %>
+          試しに使ってみる？
+        <% end %>
       </div>
 
       <%= render "public/shared/links" %>

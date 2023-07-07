@@ -1,0 +1,66 @@
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: white;
+}
+
+.calendar-heading {
+  text-align: center;
+}
+
+.previous-btn, .next-btn {
+  width: 150px;
+}
+
+.simple-calendar table th:nth-child(7) { /* 土曜日 */
+  color: #1e90ff;
+}
+
+.simple-calendar table th:nth-child(1) { /* 日曜日 */
+  color: #fa8072;
+}
+
+.simple-calendar table td:nth-child(7) { /* 土曜日日付 */
+  color: #1e90ff;
+}
+
+.simple-calendar table td:nth-child(1) { /* 日曜日日付 */
+  color: #fa8072;
+}
+
+.simple-calendar table td {
+  border: 1px solid #000;
+  width: 40px; /* 枠の幅 */
+  height: 100px; /* 枠の高さ */
+  box-sizing: border-box;
+}
+
+.simple-calendar table th {
+  border-bottom: 1px solid #000;
+  border-top: none;
+  text-align: center;
+}
+
+/* 前後の月の日付をグレースケールに変更 */
+.previous-month, .next-month{
+  background-color: #d3d3d3;
+  color: #808080;
+}
+
+.simple-calendar table td.previous-month:nth-child(7),
+.simple-calendar table td.next-month:nth-child(7),
+.simple-calendar table td.previous-month:nth-child(1),
+.simple-calendar table td.next-month:nth-child(1) {
+  color: #808080;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

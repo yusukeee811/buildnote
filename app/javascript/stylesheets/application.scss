@@ -11,6 +11,7 @@ header {
   top: 0;
   left: 0;
   height: 100vh;
+  width: 220px;
   display: flex;
   flex-direction: column;
   border-right: 1px solid #3A4750;
@@ -25,7 +26,7 @@ header {
 main {
   flex-grow: 1;
   overflow-y: auto;
-  margin-left: 175px;
+  margin-left: 220px;
 }
 
 .navbar {

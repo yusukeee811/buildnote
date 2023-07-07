@@ -13,4 +13,11 @@ class Public::UsersController < ApplicationController
 
   def withdraw
   end
+
+  def create_guest
+    @user = User.guest
+    sign_in @user
+    redirect_to posts_path
+  end
+
 end

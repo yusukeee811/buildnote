@@ -13,7 +13,8 @@ Rails.application.routes.draw do
     root to: 'homes#top'
 
     get 'users/:name/unsubscribe'            => 'users#unsubscribe',        as: 'users_unsubscribe'
-    get 'users/:name/withdraw'               => 'users#withdraw',           as: 'users_withdraw'
+    patch 'users/:name/withdraw'             => 'users#withdraw',           as: 'users_withdraw'
+    post 'users/guest_sign_in'               => 'users#create_guest',       as: 'create_guest'
     resources :users, param: :name, only:[:show, :edit, :update] do
       get 'followings'                       => 'relationships#followings', as: 'followings'
       get 'followers'                        => 'relationships#followers',  as: 'followers'
@@ -37,7 +38,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     root to: 'homes#top'
-    get 'users/:name/withdraw'               => 'users#withdraw',           as: 'users_withdraw'
+    patch 'users/:name/withdraw'             => 'users#withdraw',           as: 'users_withdraw'
     resources :users, param: :name, only:[:show, :edit, :update]
     resources :posts, only:[:index]
   end

@@ -17,6 +17,15 @@ class User < ApplicationRecord
   has_many :followings, through: :relationships,            source: :followed
   has_many :followers,  through: :reverse_of_relationships, source: :follower
 
+  def self.guest
+    # ゲストユーザーが存在する場合は、既存のゲストユーザーをログインさせる
+    # 存在しない場合は、新しいゲストユーザーを作成する
+    find_or_create_by(name: 'guest', email: 'guest@example.com') do |user|
+    #パスワードは特定されないようにランダムパスワード
+      user.password = SecureRandom.urlsafe_base64
+    end
+  end
+
   # フォロー時の処理
   def follow(user_id)
     relationships.create(followed_id: user_id)

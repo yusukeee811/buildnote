@@ -14,10 +14,12 @@ class Public::PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @post.user_id = current_user.id
+
     if @post.save
       redirect_to posts_path
     else
-      render :new, notice:"投稿できません"
+      flash.now[:notice] = "投稿できません"
+      render :new
     end
   end
 

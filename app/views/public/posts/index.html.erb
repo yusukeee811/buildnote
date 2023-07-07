@@ -6,14 +6,16 @@
           新規投稿
         </span>
       </h4>
-      <% @posts.each do |post| %>
+      <% @posts.order(created_at: :desc).each do |post| %>
         <div class="card rounded">
           <%= image_tag post.get_image, class: "card-img-top" %>
         <div class="card-body border-top">
           <div class="card-text">
             <div class="row">
               <div class="col-md-3">
+                <%= link_to user_path(post.user.id), class: "text-dark" do %>
                 <%= image_tag post.user.get_image(*25), class: "rounded-circle mr-1" %><%= post.user.name %>
+                <% end %>
               </div>
               <div class="col-md-6">
                 <%= post.caption %>
@@ -28,6 +30,9 @@
             </div>
           </div>
         </div>
+
+        <!--コメント機能、いいね機能を追加予定-->
+
         </div>
       <% end %>
     </div>

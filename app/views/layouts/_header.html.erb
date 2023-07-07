@@ -6,7 +6,7 @@
     <ul class="navbar-nav">
       <% if user_signed_in? %>
       <li class="nav-item mt-2 ml-0">
-        <%= link_to user_user_search_path(user_name: current_user.name), class: 'nav-link text-dark' do %>
+        <%= link_to user_user_search_path(current_user), class: 'nav-link text-dark' do %>
           <i class="fas fa-search fa-lg"></i>
           <span class="ml-2">
             検索
@@ -30,7 +30,7 @@
         <% end %>
       </li>
       <li class="nav-item mt-4 ml-0">
-        <%= link_to user_post_likes_path(user_name: current_user.name), class: 'nav-link text-dark' do %>
+        <%= link_to user_post_likes_path(current_user), class: 'nav-link text-dark' do %>
           <i class="fas fa-heart fa-lg"></i>
           <span class="ml-2">
             いいね一覧
@@ -38,10 +38,12 @@
         <% end %>
       </li>
       <li class="nav-item mt-4 ml-0">
-        <%= link_to "画像", user_path(name: current_user.name), class: 'nav-link text-dark' %>
-        <span class="ml-2">
-          プロフィール
-        </span>
+        <%= link_to user_path(current_user), class: 'nav-link text-dark' do %>
+          <%= image_tag current_user.get_image(*25), class: "rounded-circle" %>
+          <span class="ml-2">
+            プロフィール
+          </span>
+        <% end %>
       </li>
       <li class="nav-item mt-4 ml-0">
         <%= link_to new_post_path, class: 'nav-link text-dark' do %>

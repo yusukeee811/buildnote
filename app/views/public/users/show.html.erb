@@ -1,4 +1,5 @@
-<div class="container">
+<!-- ユーザー情報 -->
+<div class="container pb-5 border-bottom">
   <div class="row">
     <div class="col-md-6 mx-auto">
       <h2 class="py-4 mb-0">
@@ -43,5 +44,18 @@
         <% end %>
       </div>
     </div>
+  </div>
+</div>
+
+<!-- ユーザー投稿一覧 -->
+<div class="container">
+  <div class="row">
+    <% @posts.order(created_at: :desc).each do |post| %>
+      <div class="col-md-4 p-4">
+        <%= link_to post_path(post.id) do %>
+          <%= image_tag post.get_image, class: "user-post" %>
+        <% end %>
+      </div>
+    <% end %>
   </div>
 </div>

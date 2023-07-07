@@ -104,3 +104,4 @@
 
 # 使用素材
 - [ロゴジェネレーター](https://www.shopify.com/jp/tools/logo-maker)
+- [icon-icons.com](https://icon-icons.com/ja/)

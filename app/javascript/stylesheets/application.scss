@@ -6,6 +6,7 @@
   box-sizing: border-box;
 }
 
+//ヘッダーを右に配置//
 header {
   position: fixed;
   top: 0;
@@ -28,7 +29,9 @@ main {
   overflow-y: auto;
   margin-left: 220px;
 }
+//ここまで//
 
+//ヘッダー編集//
 .navbar {
   height: 100%;
   display: flex;
@@ -44,6 +47,7 @@ main {
 .navbar-nav .nav-item:last-child {
   margin-top: auto;
 }
+//ここまで//
 
 .top-img {
   width: 100%;

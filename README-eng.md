@@ -102,3 +102,4 @@ Individuals engaged in training and exercise.
 
 # Materials Used
 - [logo-maker](https://www.shopify.com/jp/tools/logo-maker)
+- [icon-icons.com](https://icon-icons.com/ja/)

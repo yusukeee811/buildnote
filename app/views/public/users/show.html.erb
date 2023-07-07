@@ -1,2 +1,47 @@
-<h1>Public::Users#show</h1>
-<p>Find me in app/views/public/users/show.html.erb</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 mx-auto">
+      <h2 class="py-4 mb-0">
+        <%= @user.name %>
+      </h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3 ml-auto">
+      <%= image_tag @user.get_image(*150), class: "rounded-circle" %>
+    </div>
+    <div class="col-md-3 mr-auto">
+      <div class="user-info text-center mb-3">
+        投稿数 <%= @user.posts.count %>
+      </div>
+      <div class="user-info text-center">
+        <% if current_user == @user %>
+          <div class="d-inline-block mr-mb">
+            フォロー数
+          </div>
+          <%= link_to user_followings_path(@user.id) do %>
+            <%= @user.followings.count %>
+          <% end %>
+          <div class="d-inline-block mx-2 mb">
+            フォロワー数
+          </div>
+          <%= link_to user_followers_path(@user.id) do %>
+            <%= @user.followers.count %>
+          <% end %>
+        <% end %>
+      </div>
+      <div class="user-edit mt-5">
+        <% unless current_user == @user %>
+          <% if current_user.following?(@user) %>
+            <%= link_to "フォローを外す",  user_relationship_path(@user), method: :delete, class: "btn btn-info" %>
+          <% else %>
+            <%= link_to "フォローする", user_relationship_path(@user), method: :post, class: "btn btn-success btn-sm btn-block" %>
+          <% end %>
+        <% end %>
+        <% if current_user == @user %>
+          <%= link_to "ユーザー情報を編集する", edit_user_path(@user), class: "btn btn-primary btn-block btn-sm" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

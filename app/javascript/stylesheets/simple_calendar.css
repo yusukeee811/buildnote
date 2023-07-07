@@ -28,8 +28,7 @@
 
 .simple-calendar table td {
   border: 1px solid #000;
-  width: 40px; /* 枠の幅 */
-  height: 100px; /* 枠の高さ */
+  height: 80px;
   box-sizing: border-box;
 }
 

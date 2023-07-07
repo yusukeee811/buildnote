@@ -9,8 +9,24 @@
       <% @posts.each do |post| %>
         <div class="card rounded">
           <%= image_tag post.get_image, class: "card-img-top" %>
-        <div class="card-body">
-          <p class="card-text">Some quick example text </p>
+        <div class="card-body border-top">
+          <div class="card-text">
+            <div class="row">
+              <div class="col-md-3">
+                <%= image_tag post.user.get_image(*25), class: "rounded-circle mr-1" %><%= post.user.name %>
+              </div>
+              <div class="col-md-6">
+                <%= post.caption %>
+              </div>
+              <div class="col-md-3 text-right">
+                <% if post.user == current_user %>
+                  <%= link_to post_path(post.id), method: :delete, data: { confirm: '本当に消しますか？' }, class: "text-dark" do %>
+                    <i class="far fa-trash-alt"></i>
+                  <% end %>
+                <% end %>
+              </div>
+            </div>
+          </div>
         </div>
         </div>
       <% end %>

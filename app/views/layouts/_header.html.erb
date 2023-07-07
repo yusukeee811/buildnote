@@ -13,15 +13,15 @@
           </span>
         <% end %>
       </li>
-      <li class="nav-item mt-5 ml-0">
+      <li class="nav-item mt-4 ml-0">
         <%= link_to trainings_path, class: 'nav-link text-dark' do %>
           <i class="fas fa-calendar-alt fa-lg"></i>
           <span class="ml-2">
-            データ入力
+            カレンダー
           </span>
         <% end %>
       </li>
-      <li class="nav-item mt-5 ml-0">
+      <li class="nav-item mt-4 ml-0">
         <%= link_to trainings_graph_path, class: 'nav-link text-dark' do %>
           <i class="fas fa-chart-line fa-lg"></i>
           <span class="ml-2">
@@ -29,7 +29,7 @@
           </span>
         <% end %>
       </li>
-      <li class="nav-item mt-5 ml-0">
+      <li class="nav-item mt-4 ml-0">
         <%= link_to user_post_likes_path(user_name: current_user.name), class: 'nav-link text-dark' do %>
           <i class="fas fa-heart fa-lg"></i>
           <span class="ml-2">
@@ -37,13 +37,13 @@
           </span>
         <% end %>
       </li>
-      <li class="nav-item mt-5 ml-0">
+      <li class="nav-item mt-4 ml-0">
         <%= link_to "画像", user_path(name: current_user.name), class: 'nav-link text-dark' %>
         <span class="ml-2">
           プロフィール
         </span>
       </li>
-      <li class="nav-item mt-5 ml-0">
+      <li class="nav-item mt-4 ml-0">
         <%= link_to new_post_path, class: 'nav-link text-dark' do %>
           <i class="fas fa-plus-circle fa-lg"></i>
           <span class="ml-2">
@@ -51,7 +51,7 @@
           </span>
         <% end %>
       </li>
-      <li class="nav-item mt-5 ml-0">
+      <li class="nav-item mt-4 ml-0">
         <%= link_to new_post_path, class: 'nav-link text-dark' do %>
           <i class="fas fa-plus-circle fa-lg"></i>
           <span class="ml-2">

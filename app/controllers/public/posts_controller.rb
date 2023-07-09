@@ -14,7 +14,6 @@ class Public::PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @post.user_id = current_user.id
-
     if @post.save
       redirect_to posts_path
     else
@@ -25,8 +24,10 @@ class Public::PostsController < ApplicationController
 
   def destroy
     @post = Post.find(params[:id])
-    @post.destroy
-    redirect_to posts_path, notice:"投稿削除しました"
+    if @post.destroy
+      redirect_to posts_path, notice:"投稿削除しました"
+    else
+      flash.now[:notice] = "投稿削除できません"
   end
 
   private

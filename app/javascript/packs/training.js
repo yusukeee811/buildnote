@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const setField = document.querySelector('.set-field input');
   const weightAndRepsFields = document.querySelector('.weight-and-reps-fields');
   const form = document.querySelector('#myForm'); // フォーム要素を適切なセレクタで取得
-  
+
   setField.addEventListener('input', function() {
     // 現在のセット数を取得
     const set = parseInt(setField.value);

@@ -3,12 +3,15 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
+  enum status: { active: 0, withdrawal: 1, force_withdrawal: 2 }
+
   has_one_attached :image
 
   has_many :posts,         dependent: :destroy
   has_many :post_likes,    dependent: :destroy
   has_many :post_comments, dependent: :destroy
-  has_many :trainings,     dependent: :destroy
+  # has_many :trainings,     dependent: :destroy
   # フォローした時の関係
   has_many :relationships,            class_name: "Relationship", foreign_key: "follower_id", dependent: :destroy
   # フォローされた時の関係

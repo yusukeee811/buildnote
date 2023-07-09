@@ -9,7 +9,6 @@ class Public::TrainingsController < ApplicationController
 
   def create
     @training = Training.new(training_params)
-    @training.user_id = current_user.id
     if @training.save
       redirect_to trainings_path, notice:"トレーニングデータを追加しました。"
     else
@@ -32,7 +31,7 @@ class Public::TrainingsController < ApplicationController
   private
 
   def training_params
-    params.require(:training).permit(:name, :set, :weight, :reptition)
+    params.require(:training).permit(:name, :set, :weight, :repetition)
   end
 
 end

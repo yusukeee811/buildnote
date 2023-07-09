@@ -181,3 +181,9 @@ ja:
       long: "%Y/%m/%d %H:%M"
       short: "%m/%d %H:%M"
     pm: 午後
+  enums:
+    user:
+      status:
+        active: "有効"
+        withdrawal: "退会"
+        force_withdrawal: "強制退会"

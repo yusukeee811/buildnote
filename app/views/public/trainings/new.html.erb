@@ -16,8 +16,15 @@
           <%= f.label :set, "セット数" %> <br>
           <%= f.number_field :set, min: 1, max: 10, class: "form-control" %>
         </div>
-        <div class="weight-and-reps-fields">
-          <!--training.jsにてセット数に応じて入力欄を取得-->
+        <div class="weight-and-rep-fields container-flex mt-3">
+          <div class="weight-field mt-3">
+            <%= f.label :weight, "重量[kg]" %> <br>
+            <%= f.text_field :weight, class: "form-control" %>
+          </div>
+          <div class="rep-field mt-3">
+            <%= f.label :reptition, "回数" %> <br>
+            <%= f.number_field :reptition, min: 1, class: "form-control" %>
+          </div>
         </div>
         <div class="form-group">
           <%= f.submit "保存する", class: "btn btn-block btn-primary mt-4" %>

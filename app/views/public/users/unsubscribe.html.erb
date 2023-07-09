@@ -1,2 +1,32 @@
-<h1>Public::Users#confirm</h1>
-<p>Find me in app/views/public/users/confirm.html.erb</p>
+<div class="container">
+  <h1 class="my-5 font-weight-bold">
+    退会確認
+  </h1>
+  <p>
+    ご利用ありがとうございました。
+  </p>
+
+  <p class="mt-5 mb-1" style="color: red;">
+    ⚠️以下の注意事項をご確認の上、『退会する』を押してください。
+  </p>
+
+  <ul class="pl-4">
+    <li>
+      退会の操作は取り消すことができません。
+    </li>
+    <li>
+      下記の『退会する』を押すことで退会処理は完了し、トレーニングデータ、投稿は全て削除されます。
+    </li>
+    <li>
+      退会後は、データの復旧はできません。
+    </li>
+  </ul>
+
+  <div class="d-flex">
+    <%= link_to "退会する", users_withdraw_path, method: :patch, class: "btn btn-danger mt-3", data: { confirm: "本当に退会しますか？" } %>
+    <div class="mt-auto ml-4">
+      <%= link_to "退会キャンセル", user_path(@user.id) %>
+    </div>
+  </div>
+
+</div>

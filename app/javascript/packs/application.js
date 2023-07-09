@@ -18,3 +18,4 @@ Turbolinks.start()
 ActiveStorage.start()
 
 import '../stylesheets/simple_calendar.css'
+import './training.js';

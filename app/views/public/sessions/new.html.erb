@@ -27,11 +27,7 @@
         </div>
       <% end %>
 
-      <div class="form-group my-4 py-4 border-top border-bottom">
-        <%= link_to create_guest_path, method: :post, data: { confirm: 'ゲストユーザーとしてログインします。'}, class: "btn btn-block btn-danger" do %>
-          試しに使ってみる？
-        <% end %>
-      </div>
+      <%= render "public/shared/guest" %>
 
       <%= render "public/shared/links" %>
 

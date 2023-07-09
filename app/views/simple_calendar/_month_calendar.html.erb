@@ -15,10 +15,12 @@
     </thead>
 
     <tbody>
+      <% today = Date.current %> <!-- ここで日付を取得 -->
       <% date_range.each_slice(7) do |week| %>
         <tr>
           <% week.each do |day| %>
-            <%= content_tag :td, class: "#{calendar.td_classes_for(day)} #{'previous-month' if day.month != start_date.month} #{'next-month' if day.month != start_date.month}" do %>
+            <% is_today = (day == today) %> <!-- ここでis_todayを判定 -->
+            <%= content_tag :td, class: "#{calendar.td_classes_for(day)} #{'previous-month' if day.month != start_date.month} #{'next-month' if day.month != start_date.month} #{'today' if is_today}" do %>
               <% if defined?(Haml) && respond_to?(:block_is_haml?) && block_is_haml?(passed_block) %>
                 <% capture_haml(day, sorted_events.fetch(day, []), &passed_block) %>
               <% else %>

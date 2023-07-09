@@ -94,6 +94,7 @@ ActiveRecord::Schema.define(version: 2023_07_06_065236) do
     t.decimal "weight", null: false
     t.integer "repetition", null: false
     t.integer "set", null: false
+    t.datetime "start_time"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_trainings_on_user_id"

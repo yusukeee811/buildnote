@@ -51,7 +51,14 @@
   color: #808080;
 }
 
+.simple-calendar table td:hover {
+  background-color: #f0f0f0;
+}
 
+.today {
+  background-color: #007bff;
+  color: #ffffff !important;
+}
 
 
 

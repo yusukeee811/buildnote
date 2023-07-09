@@ -34,9 +34,9 @@
       <div class="user-edit mt-5">
         <% unless current_user == @user %>
           <% if current_user.following?(@user) %>
-            <%= link_to "フォローを外す",  user_relationship_path(@user), method: :delete, class: "btn btn-info" %>
+            <%= link_to "フォローを外す",  user_relationship_path(@user), method: :delete, class: "btn btn-primary btn-block btn-sm" %>
           <% else %>
-            <%= link_to "フォローする", user_relationship_path(@user), method: :post, class: "btn btn-success btn-sm btn-block" %>
+            <%= link_to "フォローする", user_relationship_path(@user), method: :post, class: "btn btn-primary btn-block btn-sm" %>
           <% end %>
         <% end %>
         <% if current_user == @user %>

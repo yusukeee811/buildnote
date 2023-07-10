@@ -1,6 +1,6 @@
 class Public::TrainingsController < ApplicationController
   def index
-    @trainings = Training.all
+    @trainings = Training.all.page(params[:page]).per(5)
   end
 
   def new
@@ -9,6 +9,7 @@ class Public::TrainingsController < ApplicationController
 
   def create
     @training = Training.new(training_params)
+    @training.user_id = current_user.id
     if @training.save
       redirect_to trainings_path, notice:"トレーニングデータを追加しました。"
     else
@@ -25,13 +26,13 @@ class Public::TrainingsController < ApplicationController
   def destroy
     @training = Training.find(params[:id])
     @training.destroy
-    redirect_to tranings_path, notice:"データを削除しました。"
+    redirect_to trainings_path, notice:"トレーニングデータを削除しました。"
   end
 
   private
 
   def training_params
-    params.require(:training).permit(:name, :set, :weight, :repetition)
+    params.require(:training).permit(:name, :set, :weight, :repetition, :start_time)
   end
 
 end

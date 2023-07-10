@@ -1,10 +1,52 @@
 <div class="container mx-auto my-5 px-0">
   <%= month_calendar events: @trainings do |date, trainings| %>
     <%= date.day %>
-    <% trainings.each do |training| %>
-      <div>
-        <%= training.name %>
-      </div>
+    <% trainings.each_with_index do |training, index| %>
+      <% if index < 2 %>
+        <%= training.name %> <br>
+      <% elsif index == 2 %>
+        他<%= trainings.size - 2 %>
+      <% end %>
     <% end %>
   <% end %>
+
+  <table class="training-table table mt-5">
+		<thead class="bg-light">
+			<tr>
+				<th>日付</th>
+				<th>トレーニング</th>
+				<th>セット数</th>
+				<th>重量[kg]</th>
+				<th>回数</th>
+				<th></th>
+				<th></th>
+			</tr>
+		</thead>
+		<% @trainings.each do |training| %>
+		<tbody>
+			<tr>
+				<td><%= training.start_time.strftime("%Y-%m-%d %H:%M") %></td>
+				<td><%= training.name %></td>
+				<td><%= training.set %></td>
+				<td><%= training.weight %></td>
+				<td><%= training.repetition %></td>
+				<td>
+				  <%=link_to edit_training_path(training.id), class: "text-dark" do %>
+				    <i class="fas fa-edit"></i>
+          <% end %>
+				</td>
+				<td>
+				  <%=link_to training_path(training.id), method: :delete , data: {confirm:"本当に削除しますか"} , class: "text-dark" do %>
+				    <i class="fas fa-trash-alt"></i>
+				  <% end %>
+				</td>
+			</tr>
+		</tbody>
+		<% end %>
+  </table>
+
+  <div class="row justify-content-center my-5">
+    <%= paginate @trainings %>
+  </div>
+
 </div>

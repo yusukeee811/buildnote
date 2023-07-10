@@ -28,6 +28,7 @@ class Public::PostsController < ApplicationController
       redirect_to posts_path, notice:"投稿削除しました"
     else
       flash.now[:notice] = "投稿削除できません"
+    end
   end
 
   private

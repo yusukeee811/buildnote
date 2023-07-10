@@ -5,7 +5,7 @@
     </a>
     <ul class="navbar-nav">
       <% if user_signed_in? %>
-      <li class="nav-item mt-2 ml-0">
+      <li class="nav-item mt-2 ml-0 px-2">
         <%= link_to user_user_search_path(current_user), class: 'nav-link text-dark' do %>
           <i class="fas fa-search fa-lg"></i>
           <span class="ml-2">
@@ -13,7 +13,7 @@
           </span>
         <% end %>
       </li>
-      <li class="nav-item mt-4 ml-0">
+      <li class="nav-item mt-4 ml-0 px-2">
         <%= link_to trainings_path, class: 'nav-link text-dark' do %>
           <i class="fas fa-calendar-alt fa-lg"></i>
           <span class="ml-2">
@@ -21,7 +21,7 @@
           </span>
         <% end %>
       </li>
-      <li class="nav-item mt-4 ml-0">
+      <li class="nav-item mt-4 ml-0 px-2">
         <%= link_to trainings_graph_path, class: 'nav-link text-dark' do %>
           <i class="fas fa-chart-line fa-lg"></i>
           <span class="ml-2">
@@ -29,7 +29,7 @@
           </span>
         <% end %>
       </li>
-      <li class="nav-item mt-4 ml-0">
+      <li class="nav-item mt-4 ml-0 px-2">
         <%= link_to user_post_likes_path(current_user), class: 'nav-link text-dark' do %>
           <i class="fas fa-heart fa-lg"></i>
           <span class="ml-2">
@@ -37,7 +37,7 @@
           </span>
         <% end %>
       </li>
-      <li class="nav-item mt-4 ml-0">
+      <li class="nav-item mt-4 ml-0 px-2">
         <%= link_to user_path(current_user), class: 'nav-link text-dark' do %>
           <%= image_tag current_user.get_image(*25), class: "rounded-circle" %>
           <span class="ml-2">
@@ -45,7 +45,7 @@
           </span>
         <% end %>
       </li>
-      <li class="nav-item mt-4 ml-0">
+      <li class="nav-item mt-4 ml-0 px-2">
         <%= link_to new_post_path, class: 'nav-link text-dark' do %>
           <i class="fas fa-camera-retro fa-lg"></i>
           <span class="ml-2">
@@ -53,7 +53,7 @@
           </span>
         <% end %>
       </li>
-      <li class="nav-item mt-4 ml-0">
+      <li class="nav-item mt-4 ml-0 px-2">
         <%= link_to new_training_path, class: 'nav-link text-dark' do %>
           <i class="fas fa-plus-circle fa-lg"></i>
           <span class="ml-2">
@@ -61,7 +61,7 @@
           </span>
         <% end %>
       </li>
-      <li class="nav-item ml-0">
+      <li class="nav-item ml-0 px-2">
         <%= link_to destroy_user_session_path, method: :delete, data: { confirm: 'ログアウトしますか？'}, class: 'nav-link text-dark' do %>
           <i class="fas fa-sign-out-alt fa-lg"></i>
           <span class="ml-2">
@@ -70,7 +70,7 @@
         <% end %>
       </li>
       <% else %>
-      <li class="nav-item mt-2 ml-0">
+      <li class="nav-item mt-2 ml-0 px-2">
         <%= link_to create_guest_path, method: :post, data: { confirm: 'ゲストユーザーとしてログインします。'}, class: 'nav-link text-dark' do %>
           <i class="fas fa-user-alt fa-lg"></i>
           <span class="ml-2">
@@ -78,7 +78,7 @@
           </span>
         <% end %>
       </li>
-      <li class="nav-item mt-5 ml-0">
+      <li class="nav-item mt-5 ml-0 px-2">
         <%= link_to new_user_session_path, class: 'nav-link text-dark' do %>
           <i class="fas fa-sign-in-alt fa-lg"></i>
           <span class="ml-2">
@@ -86,7 +86,7 @@
           </span>
         <% end %>
       </li>
-      <li class="nav-item my-5 ml-0">
+      <li class="nav-item my-5 ml-0 px-2">
         <%= link_to new_user_registration_path, class: 'nav-link text-dark' do %>
           <i class="fas fa-user-plus fa-lg"></i>
           <span class="ml-2">
@@ -94,7 +94,7 @@
           </span>
         <% end %>
       </li>
-      <li class="nav-item ml-0">
+      <li class="nav-item ml-0 px-2">
         <%= link_to "https://github.com/yusukeee811/buildnote", target: "_blank", class: 'nav-link text-dark d-flex align-items-center' do %>
           <i class="fab fa-github-square fa-2x"></i>
           <span class="ml-2">

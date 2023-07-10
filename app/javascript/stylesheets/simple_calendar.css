@@ -10,6 +10,10 @@
   width: 150px;
 }
 
+.simple-calendar table {
+  table-layout: fixed;
+}
+
 .simple-calendar table th:nth-child(7) { /* 土曜日 */
   color: #1e90ff;
 }
@@ -28,8 +32,12 @@
 
 .simple-calendar table td {
   border: 1px solid #000;
-  height: 80px;
+  width: 80px;
+  height: 100px;
   box-sizing: border-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space:nowrap;
 }
 
 .simple-calendar table th {
@@ -58,6 +66,10 @@
 .today {
   background-color: #007bff;
   color: #ffffff !important;
+}
+
+.training-table {
+  
 }
 
 

@@ -27,7 +27,9 @@ class Public::PostsController < ApplicationController
     if @post.destroy
       redirect_to posts_path, notice:"投稿削除しました"
     else
+      @posts = Post.all
       flash.now[:notice] = "投稿削除できません"
+      render :index
     end
   end
 

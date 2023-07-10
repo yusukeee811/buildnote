@@ -1,2 +1,14 @@
-<h1>Public::Posts#show</h1>
-<p>Find me in app/views/public/posts/show.html.erb</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-5 mx-auto">
+      <h4 class="py-4 mb-0">
+        <span class="ml-3 font-weight-bold">
+          投稿詳細
+        </span>
+      </h4>
+
+      <%= render 'index', post: @post %>
+
+    </div>
+  </div>
+</div>

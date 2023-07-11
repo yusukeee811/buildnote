@@ -29,7 +29,7 @@ class User < ApplicationRecord
     end
   end
 
-  def get_image(*size)
+  def get_profile_image(*size)
     unless image.attached?
       file_path = Rails.root.join('app/assets/images/no-image.png')
       image.attach(io: File.open(file_path), filename: 'no-image.png', content_type: 'image/png')

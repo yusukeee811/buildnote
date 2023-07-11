@@ -12,19 +12,19 @@ Rails.application.routes.draw do
   scope module: :public do
     root to: 'homes#top'
 
-    get 'users/:id/unsubscribe'              => 'users#unsubscribe',        as: 'users_unsubscribe'
-    patch 'users/:id/withdraw'               => 'users#withdraw',           as: 'users_withdraw'
-    post 'users/guest_sign_in'               => 'users#create_guest',       as: 'create_guest'
+    get 'users/:id/unsubscribe' => 'users#unsubscribe',        as: 'users_unsubscribe'
+    patch 'users/:id/withdraw'  => 'users#withdraw',           as: 'users_withdraw'
+    post 'users/guest_sign_in'  => 'users#create_guest',       as: 'create_guest'
     resources :users, only:[:show, :edit, :update] do
-      get 'followings'                       => 'relationships#followings', as: 'followings'
-      get 'followers'                        => 'relationships#followers',  as: 'followers'
-      resources :relationships, only:[:create, :destroy]
-      get 'user_search'                      => 'searches#user_search',     as: 'user_search'
-      resources :post_likes, only:[:index]
+      get 'followings'          => 'relationships#followings', as: 'followings'
+      get 'followers'           => 'relationships#followers',  as: 'followers'
+      resource :relationships, only:[:create, :destroy]
+      get 'user_search'         => 'searches#user_search',     as: 'user_search'
+      resources :post_likes,    only:[:index]
     end
 
     resources :posts, only:[:index, :show, :new, :create, :destroy] do
-      resources :post_likes, only:[:create, :destroy]
+      resource :post_likes,    only:[:create, :destroy]
       resources :post_comments, only:[:create, :destroy]
     end
 

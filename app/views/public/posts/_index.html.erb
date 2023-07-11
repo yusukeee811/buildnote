@@ -1,29 +1,28 @@
 <div class="card rounded">
   <%= link_to post_path(post.id) do %>
-    <%= image_tag post.get_image, class: "card-img-top" %>
+    <%= image_tag post.get_post_image, class: "card-img-top" %>
   <% end %>
-<div class="card-body border-top">
-  <div class="card-text">
-    <div class="row">
-      <div class="col-md-3">
-        <%= link_to user_path(post.user.id), class: "text-dark" do %>
-          <%= image_tag post.user.get_image(*25), class: "rounded-circle mr-1" %><%= post.user.name %>
-        <% end %>
-      </div>
-      <div class="col-md-6">
-        <%= post.caption %>
-      </div>
-      <div class="col-md-3 text-right">
-        <% if post.user == current_user %>
-          <%= link_to post_path(post.id), method: :delete, data: { confirm: '本当に消しますか？' }, class: "text-dark" do %>
-            <i class="far fa-trash-alt"></i>
+  <div class="card-body border-top">
+    <div class="card-text">
+      <div class="row">
+        <div class="col-md-9">
+          <%= link_to user_path(post.user.id), class: "text-dark", style: "text-decoration: none;" do %>
+            <%= image_tag post.user.get_profile_image(*25), class: "rounded-circle mr-1" %>
+            <%= post.user.name %>
           <% end %>
-        <% end %>
+          &nbsp;&nbsp;<%= post.caption %>
+        </div>
+        <div class="col-md-3 text-right">
+          <%= render 'public/post_likes/like', post: post %>&nbsp;&nbsp;
+          <% if post.user == current_user %>
+            <%= link_to post_path(post.id), method: :delete, data: { confirm: '本当に消しますか？' }, class: "text-dark" do %>
+              <i class="far fa-trash-alt"></i>
+            <% end %>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
-<!--コメント機能、いいね機能を追加予定-->
-
-</div>
+<!--いいね機能を追加予定-->

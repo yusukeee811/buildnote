@@ -1,0 +1,17 @@
+<% if post.post_liked_by?(current_user) %>
+  <%= link_to post_post_likes_path(post.id), method: :delete, style: "text-decoration: none;" do %>
+    <span style="color: red;"><i class="fas fa-heart"></i>
+      <% if current_user %>
+        <%= post.post_likes.count %>
+      <% end %>
+    </span>
+  <% end %>
+<% else %>
+  <%= link_to post_post_likes_path(post.id), method: :post, style: "text-decoration: none;" do %>
+    <span style="color: black;"><i class="far fa-heart"></i>
+      <% if current_user %>
+        <%= post.post_likes.count %>
+      <% end %>
+    </span>
+  <% end %>
+<% end %>

@@ -9,7 +9,7 @@
   </div>
   <div class="row">
     <div class="col-md-3 ml-auto">
-      <%= image_tag @user.get_image(*150), class: "rounded-circle" %>
+      <%= image_tag @user.get_profile_image(*150), class: "rounded-circle" %>
     </div>
     <div class="col-md-3 mr-auto">
       <div class="user-info text-center mb-3">
@@ -53,7 +53,7 @@
     <% @posts.order(created_at: :desc).each do |post| %>
       <div class="col-md-4 p-4">
         <%= link_to post_path(post.id) do %>
-          <%= image_tag post.get_image, class: "user-post" %>
+          <%= image_tag post.get_post_image, class: "user-post" %>
         <% end %>
       </div>
     <% end %>

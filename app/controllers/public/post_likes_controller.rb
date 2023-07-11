@@ -1,7 +1,4 @@
 class Public::PostLikesController < ApplicationController
-  def index
-  end
-
   def create
     @post = Post.find(params[:post_id])
     @post_like = current_user.post_likes.new(post_id: @post.id)
@@ -16,5 +13,4 @@ class Public::PostLikesController < ApplicationController
     @post_like.destroy
     redirect_to posts_path
   end
-
 end

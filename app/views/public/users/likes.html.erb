@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-5 mx-auto px-0">
+      <h4 class="py-4 mb-0">
+        <span class="ml-3 font-weight-bold">
+          いいね投稿一覧
+        </span>
+      </h4>
+
+      <% @liked_posts.order(created_at: :desc).each do |liked_post| %>
+        <%= render 'public/posts/index', post: liked_post %>
+        <%= render 'public/post_comments/comment', post: liked_post, post_comment: @post_comment %>
+      <% end %>
+
+    </div>
+  </div>
+</div>

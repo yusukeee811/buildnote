@@ -49,6 +49,14 @@ class Public::UsersController < ApplicationController
     end
   end
 
+  def likes
+    @user = User.find(params[:id])
+    @post_comment = PostComment.new
+    #ユーザーがいいねした投稿を全て取得
+    likes = PostLike.where(user_id: @user.id).pluck(:post_id)
+    @liked_posts = Post.where(id: likes)
+  end
+
   private
 
   def user_params

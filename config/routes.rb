@@ -12,34 +12,50 @@ Rails.application.routes.draw do
   scope module: :public do
     root to: 'homes#top'
 
-    get 'users/:id/unsubscribe' => 'users#unsubscribe',        as: 'users_unsubscribe'
-    patch 'users/:id/withdraw'  => 'users#withdraw',           as: 'users_withdraw'
-    post 'users/guest_sign_in'  => 'users#create_guest',       as: 'create_guest'
     resources :users, only:[:show, :edit, :update] do
       get 'followings'          => 'relationships#followings', as: 'followings'
       get 'followers'           => 'relationships#followers',  as: 'followers'
       resource :relationships, only:[:create, :destroy]
       get 'user_search'         => 'searches#user_search',     as: 'user_search'
-      resources :post_likes,    only:[:index]
+
+      member do
+        get 'unsubscribe'         => 'users#unsubscribe',        as: 'user_unsubscribe'
+        patch 'withdraw'          => 'users#withdraw',           as: 'user_withdraw'
+        get 'likes'               => 'users#likes',              as: 'user_post_likes'
+      end
+
+      collection do
+        post 'guest_sign_in'      => 'users#create_guest',       as: 'create_guest'
+      end
+
     end
 
     resources :posts, only:[:index, :show, :new, :create, :destroy] do
-      resource :post_likes,    only:[:create, :destroy]
+      resource  :post_likes,    only:[:create, :destroy]
       resources :post_comments, only:[:create, :destroy]
     end
 
     get 'posts/:post_hashtag/hashtag_search' => 'searches#hashtag_search',  as: 'hashtag_search'
 
-    get 'trainings/graph'                    => 'trainings#graph',          as: 'trainings_graph'
     resources :trainings, only:[:index, :new, :create, :edit, :update, :destroy] do
-      get 'training_search'                  => 'searches#training_search', as: 'training_search'
+      get 'training_search' => 'searches#training_search', as: 'training_search'
+      
+      collection do
+        get 'graph'           => 'trainings#graph',          as: 'training_graph'
+      end
+      
     end
+   
   end
 
   namespace :admin do
     root to: 'homes#top'
-    patch 'users/:id/withdraw'               => 'users#withdraw',           as: 'users_withdraw'
-    resources :users, only:[:show, :edit, :update]
+
+    resources :users, only:[:show, :edit, :update] do
+      member do
+        patch 'withdraw' => 'users#withdraw', as: 'user_withdraw'
+      end
+    end
     resources :posts, only:[:index]
   end
 

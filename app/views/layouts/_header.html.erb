@@ -22,7 +22,7 @@
         <% end %>
       </li>
       <li class="nav-item mt-4 ml-0 px-2">
-        <%= link_to trainings_graph_path, class: 'nav-link text-dark' do %>
+        <%= link_to training_graph_trainings_path, class: 'nav-link text-dark' do %>
           <i class="fas fa-chart-line fa-lg"></i>
           <span class="ml-2">
             グラフ
@@ -30,7 +30,7 @@
         <% end %>
       </li>
       <li class="nav-item mt-4 ml-0 px-2">
-        <%= link_to user_post_likes_path(current_user), class: 'nav-link text-dark' do %>
+        <%= link_to user_post_likes_user_path(current_user), class: 'nav-link text-dark' do %>
           <i class="fas fa-heart fa-lg"></i>
           <span class="ml-2">
             いいね一覧
@@ -71,7 +71,7 @@
       </li>
       <% else %>
       <li class="nav-item mt-2 ml-0 px-2">
-        <%= link_to create_guest_path, method: :post, data: { confirm: 'ゲストユーザーとしてログインします。'}, class: 'nav-link text-dark' do %>
+        <%= link_to create_guest_users_path, method: :post, data: { confirm: 'ゲストユーザーとしてログインします。'}, class: 'nav-link text-dark' do %>
           <i class="fas fa-user-alt fa-lg"></i>
           <span class="ml-2">
             ゲストログイン

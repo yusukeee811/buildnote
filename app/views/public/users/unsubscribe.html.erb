@@ -23,7 +23,7 @@
   </ul>
 
   <div class="d-flex">
-    <%= link_to "退会する", users_withdraw_path, method: :patch, class: "btn btn-danger mt-3", data: { confirm: "本当に退会しますか？" } %>
+    <%= link_to "退会する", user_withdraw_user_path, method: :patch, class: "btn btn-danger mt-3", data: { confirm: "本当に退会しますか？" } %>
     <div class="mt-auto ml-4">
       <%= link_to "退会キャンセル", user_path(@user.id) %>
     </div>

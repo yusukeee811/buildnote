@@ -1,5 +1,5 @@
 <% if post.post_liked_by?(current_user) %>
-  <%= link_to post_post_likes_path(post.id), method: :delete, style: "text-decoration: none;" do %>
+  <%= link_to post_post_likes_path(post.id), method: :delete, remote: true, style: "text-decoration: none;" do %>
     <span style="color: red;"><i class="fas fa-heart"></i>
       <% if current_user %>
         <%= post.post_likes.count %>
@@ -7,7 +7,7 @@
     </span>
   <% end %>
 <% else %>
-  <%= link_to post_post_likes_path(post.id), method: :post, style: "text-decoration: none;" do %>
+  <%= link_to post_post_likes_path(post.id), method: :post, remote: true, style: "text-decoration: none;" do %>
     <span style="color: black;"><i class="far fa-heart"></i>
       <% if current_user %>
         <%= post.post_likes.count %>

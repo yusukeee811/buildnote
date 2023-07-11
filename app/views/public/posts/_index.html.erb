@@ -13,7 +13,13 @@
           &nbsp;&nbsp;<%= post.caption %>
         </div>
         <div class="col-md-3 text-right">
-          <%= render 'public/post_likes/like', post: post %>&nbsp;&nbsp;
+
+          <!--いいねボタン実装-->
+          <span id="like-btn_<%= post.id %>">
+            <%= render 'public/post_likes/like', post: post %>
+          </span>
+
+          &nbsp;&nbsp;
           <% if post.user == current_user %>
             <%= link_to post_path(post.id), method: :delete, data: { confirm: '本当に消しますか？' }, class: "text-dark" do %>
               <i class="far fa-trash-alt"></i>
@@ -24,5 +30,3 @@
     </div>
   </div>
 </div>
-
-<!--いいね機能を追加予定-->

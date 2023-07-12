@@ -10,6 +10,7 @@
       <% @liked_posts.order(created_at: :desc).each do |liked_post| %>
         <%= render 'public/posts/index', post: liked_post %>
         <%= render 'public/post_comments/comment', post: liked_post, post_comment: @post_comment %>
+        <%= render 'public/post_comments/form', post: liked_post, post_comment: @post_comment %>
       <% end %>
 
     </div>

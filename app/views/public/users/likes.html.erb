@@ -9,7 +9,11 @@
 
       <% @liked_posts.order(created_at: :desc).each do |liked_post| %>
         <%= render 'public/posts/index', post: liked_post %>
-        <%= render 'public/post_comments/comment', post: liked_post, post_comment: @post_comment %>
+
+        <div class="row mx-0" id="post-comments_<%= liked_post.id %>">
+          <%= render 'public/post_comments/comment', post: liked_post, post_comment: @post_comment %>
+        </div>
+
         <%= render 'public/post_comments/form', post: liked_post, post_comment: @post_comment %>
       <% end %>
 

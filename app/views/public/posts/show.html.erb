@@ -8,8 +8,12 @@
       </h4>
 
       <%= render 'index', post: @post %>
-      <%= render 'public/post_comments/comment', post: @post, post_comment: @post_comment %>
-        <%= render 'public/post_comments/form', post: @post, post_comment: @post_comment %>
+
+      <div class="row mx-0" id="post-comments_<%= @post.id %>">
+        <%= render 'public/post_comments/comment', post: @post, post_comment: @post_comment %>
+      </div>
+
+      <%= render 'public/post_comments/form', post: @post, post_comment: @post_comment %>
 
     </div>
   </div>

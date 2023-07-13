@@ -1,0 +1,19 @@
+<% if users.exists? %>
+  <% users.each do |user| %>
+    <div class="row mb-2">
+      <div class="col-md-8 mx-auto px-0">
+        <%= link_to user_path(user.id), class: "text-dark", style: "text-decoration: none;" do %>
+          <%= image_tag user.get_profile_image(*25), class: "rounded-circle" %>
+          <%= user.name %>
+        <% end %>
+      </div>
+      <div class="col-md-4 mx-auto px-0">
+        <% if current_user.following?(user) %>
+          <%= link_to "フォロー解除",  user_relationships_path(user), method: :delete, class: "btn btn-outline-secondary btn-block btn-sm" %>
+        <% else %>
+          <%= link_to "フォローする", user_relationships_path(user), method: :post, class: "btn btn-primary btn-block btn-sm" %>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+<% end %>

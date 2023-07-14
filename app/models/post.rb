@@ -18,6 +18,7 @@ class Post < ApplicationRecord
     post_likes.exists?(user_id: user.id)
   end
 
+  #ハッシュタグをテーブルに保存
   after_create do
     post = Post.find_by(id: self.id)
     hashtags  = self.caption.scan(/[#＃][\w\p{Han}ぁ-ヶｦ-ﾟー]+/)

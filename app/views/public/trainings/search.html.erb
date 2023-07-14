@@ -3,7 +3,16 @@
   <div class="row">
     <div class="col-md-4 pr-0">
       <%= f.search_field :name_cont, placeholder: "トレーニング名", class: "form-control" %>
+      <div class="form-group mt-2 mb-0">
+        <%= f.label :start_time, "期間指定" %>
+        <div class="d-flex">
+          <%= f.date_field :start_time_gteq, class: "form-control" %>
+          <span>&nbsp;~&nbsp;</span>
+          <%= f.date_field :start_time_lteq, class: "form-control" %>
+        </div>
+      </div>
     </div>
+
     <div class="col-md-1 px-1">
       <button type="submit" class="btn btn-light rounded-circle">
         <i class="fas fa-search"></i>
@@ -11,28 +20,6 @@
     </div>
 
     <%= render 'public/shared/search' %>
-
-  </div>
-  <% end %>
-
-  <%= search_form_for @q, url: training_search_trainings_path do |f| %>
-  <div class="form-group">
-  <%= label_tag :start_date, '開始日' %>
-  <%= date_field_tag :start_date, params[:start_date], class: 'form-control' %>
-</div>
-
-<div class="form-group">
-  <%= label_tag :end_date, '終了日' %>
-  <%= date_field_tag :end_date, params[:end_date], class: 'form-control' %>
-</div>
-
-
-    </div>
-    <div class="col-md-1 px-1">
-      <button type="submit" class="btn btn-light rounded-circle">
-        <i class="fas fa-search"></i>
-      </button>
-    </div>
 
   </div>
   <% end %>

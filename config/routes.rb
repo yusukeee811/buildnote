@@ -33,9 +33,13 @@ Rails.application.routes.draw do
     resources :posts, only:[:index, :show, :new, :create, :destroy] do
       resource  :post_likes,    only:[:create, :destroy]
       resources :post_comments, only:[:create, :destroy]
-    end
 
-    get 'posts/hashtag_search' => 'posts#hashtag_search',  as: 'hashtag_search'
+
+      collection do
+        get 'search' => 'posts#search',  as: 'post_search'
+        get 'hashtag/:name' => 'posts#hashtag',  as: 'hashtag_post'
+      end
+    end
 
     resources :trainings, only:[:index, :new, :create, :edit, :update, :destroy] do
       collection do

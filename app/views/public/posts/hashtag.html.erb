@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-5 mx-auto px-0">
+      <h4 class="py-4 mb-0">
+        <span class="ml-3 font-weight-bold">
+          投稿一覧
+        </span>
+      </h4>
+
+      <% @posts.each do |post| %>
+        <%= render 'index', post: post %>
+
+        <div class="row mx-0" id="post-comments_<%= post.id %>">
+          <%= render 'public/post_comments/comment', post: post, post_comment: @post_comment %>
+        </div>
+
+        <%= render 'public/post_comments/form', post: post, post_comment: @post_comment %>
+      <% end %>
+
+    </div>
+  </div>
+</div>

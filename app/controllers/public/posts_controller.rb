@@ -35,6 +35,12 @@ class Public::PostsController < ApplicationController
     end
   end
 
+  def hashtag
+    @tag = Hashtag.find_by(hashname: params[:name])
+    @posts = @tag.posts.order(created_at: :desc)
+    @post_comment = PostComment.new
+  end
+
   private
 
   def post_params

@@ -10,7 +10,7 @@
             <%= image_tag post.user.get_profile_image(*25), class: "rounded-circle mr-1" %>
             <%= post.user.name %>
           <% end %>
-          &nbsp;&nbsp;<%= post.caption %>
+          &nbsp;&nbsp;<%= render_with_hashtags(post.caption) %>
         </div>
         <div class="col-md-3 text-right">
 

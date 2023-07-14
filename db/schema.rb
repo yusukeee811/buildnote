@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_07_06_065236) do
+ActiveRecord::Schema.define(version: 2023_07_14_141929) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -51,6 +51,30 @@ ActiveRecord::Schema.define(version: 2023_07_06_065236) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["email"], name: "index_admins_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
+  end
+
+  create_table "hashtag_posts", force: :cascade do |t|
+    t.integer "post_id_id", null: false
+    t.integer "hashtag_id_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["hashtag_id_id"], name: "index_hashtag_posts_on_hashtag_id_id"
+    t.index ["post_id_id"], name: "index_hashtag_posts_on_post_id_id"
+  end
+
+  create_table "hashtags", force: :cascade do |t|
+    t.string "hashname"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "hashtags_posts", force: :cascade do |t|
+    t.integer "post_id", null: false
+    t.integer "hashtag_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["hashtag_id"], name: "index_hashtags_posts_on_hashtag_id"
+    t.index ["post_id"], name: "index_hashtags_posts_on_post_id"
   end
 
   create_table "post_comments", force: :cascade do |t|
@@ -116,6 +140,10 @@ ActiveRecord::Schema.define(version: 2023_07_06_065236) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "hashtag_posts", "hashtag_ids"
+  add_foreign_key "hashtag_posts", "post_ids"
+  add_foreign_key "hashtags_posts", "hashtags"
+  add_foreign_key "hashtags_posts", "posts"
   add_foreign_key "post_comments", "posts"
   add_foreign_key "post_comments", "users"
   add_foreign_key "post_likes", "posts"

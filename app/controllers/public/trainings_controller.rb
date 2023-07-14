@@ -1,4 +1,6 @@
 class Public::TrainingsController < ApplicationController
+  before_action :set_q, only: [:search]
+
   def index
     @trainings = Training.all.page(params[:page]).per(5)
   end
@@ -43,10 +45,18 @@ class Public::TrainingsController < ApplicationController
     end
   end
 
+  def search
+    @training_results = @q.result
+  end
+
   private
 
   def training_params
     params.require(:training).permit(:name, :set, :weight, :repetition, :start_time)
+  end
+
+  def set_q
+    @q = Training.ransack(params[:q])
   end
 
 end

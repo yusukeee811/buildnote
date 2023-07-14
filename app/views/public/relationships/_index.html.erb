@@ -9,7 +9,7 @@
       </div>
       <div class="col-md-4 mx-auto px-0">
         <% if current_user.following?(user) %>
-          <%= link_to "フォロー解除",  user_relationships_path(user), method: :delete, class: "btn btn-outline-secondary btn-block btn-sm" %>
+          <%= link_to "フォロー解除",  user_relationships_path(user), method: :delete, class: "btn btn-outline-dark btn-block btn-sm" %>
         <% else %>
           <%= link_to "フォローする", user_relationships_path(user), method: :post, class: "btn btn-primary btn-block btn-sm" %>
         <% end %>

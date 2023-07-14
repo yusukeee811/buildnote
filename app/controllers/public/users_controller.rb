@@ -1,5 +1,6 @@
 class Public::UsersController < ApplicationController
   before_action :ensure_normal_user, only: [:update, :withdraw]
+  before_action :set_q, only: [:search]
 
   def show
     @user = User.find(params[:id])
@@ -57,6 +58,10 @@ class Public::UsersController < ApplicationController
     @liked_posts = Post.where(id: likes)
   end
 
+  def search
+    @user_results = @q.result
+  end
+
   private
 
   def user_params
@@ -68,6 +73,10 @@ class Public::UsersController < ApplicationController
     user.post_comments.destroy_all
     user.post_likes.destroy_all
     user.relationships.destroy_all
+  end
+
+  def set_q
+    @q = User.ransack(params[:q])
   end
 
 end

@@ -13,19 +13,19 @@ Rails.application.routes.draw do
     root to: 'homes#top'
 
     resources :users, only:[:show, :edit, :update] do
-      get 'followings'          => 'relationships#followings', as: 'followings'
-      get 'followers'           => 'relationships#followers',  as: 'followers'
+      get 'followings'       => 'relationships#followings', as: 'followings'
+      get 'followers'        => 'relationships#followers',  as: 'followers'
       resource :relationships, only:[:create, :destroy]
-      get 'user_search'         => 'searches#user_search',     as: 'user_search'
 
       member do
-        get 'unsubscribe'         => 'users#unsubscribe',        as: 'user_unsubscribe'
-        patch 'withdraw'          => 'users#withdraw',           as: 'user_withdraw'
-        get 'likes'               => 'users#likes',              as: 'user_post_likes'
+        get 'unsubscribe'    => 'users#unsubscribe',        as: 'user_unsubscribe'
+        patch 'withdraw'     => 'users#withdraw',           as: 'user_withdraw'
+        get 'likes'          => 'users#likes',              as: 'user_post_likes'
       end
 
       collection do
-        post 'guest_sign_in'      => 'users#create_guest',       as: 'create_guest'
+        post 'guest_sign_in' => 'users#create_guest',       as: 'create_guest'
+        get 'search'         => 'users#search',             as: 'user_search'
       end
 
     end
@@ -35,17 +35,15 @@ Rails.application.routes.draw do
       resources :post_comments, only:[:create, :destroy]
     end
 
-    get 'posts/:post_hashtag/hashtag_search' => 'searches#hashtag_search',  as: 'hashtag_search'
+    get 'posts/hashtag_search' => 'posts#hashtag_search',  as: 'hashtag_search'
 
     resources :trainings, only:[:index, :new, :create, :edit, :update, :destroy] do
-      get 'training_search' => 'searches#training_search', as: 'training_search'
-      
       collection do
-        get 'graph'           => 'trainings#graph',          as: 'training_graph'
+        get 'graph'           => 'trainings#graph',           as: 'training_graph'
+        get 'search'          => 'trainings#search',          as: 'training_search'
       end
-      
     end
-   
+
   end
 
   namespace :admin do

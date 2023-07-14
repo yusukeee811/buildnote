@@ -6,7 +6,7 @@
     <ul class="navbar-nav">
       <% if user_signed_in? %>
       <li class="nav-item mt-2 ml-0 px-2">
-        <%= link_to user_user_search_path(current_user), class: 'nav-link text-dark' do %>
+        <%= link_to user_search_users_path, class: 'nav-link text-dark' do %>
           <i class="fas fa-search fa-lg"></i>
           <span class="ml-2">
             検索

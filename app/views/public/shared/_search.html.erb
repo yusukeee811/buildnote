@@ -1,0 +1,13 @@
+<div class="col-md-6 px-0">
+  <div class="btn-group btn-group-justify d-flex" role="group">
+    <%= link_to user_search_users_path, class: "btn btn-outline-primary #{'active' if current_page?(user_search_users_path)}" do %>
+      ユーザー検索
+    <% end %>
+    <%= link_to hashtag_search_path, class: "btn btn-outline-primary #{'active' if current_page?(hashtag_search_path)}" do %>
+      #投稿検索
+    <% end %>
+    <%= link_to training_search_trainings_path, class: "btn btn-outline-primary #{'active' if current_page?(training_search_trainings_path)}" do %>
+      トレーニング検索
+    <% end %>
+  </div>
+</div>

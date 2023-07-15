@@ -11,24 +11,24 @@
   <% end %>
 </div>
 
-<div class="container mx-4 mt-4">
+<div class="container mx-5 mt-5">
   <% @user_results.each do |user_result| %>
-  <div class="row mb-2">
-      <div class="col-md-10 mx-auto px-0">
-        <%= link_to user_path(user_result.id), class: "text-dark", style: "text-decoration: none;" do %>
-          <%= image_tag user_result.get_profile_image(*25), class: "rounded-circle" %>
-          <%= user_result.name %>
-        <% end %>
-      </div>
-      <div class="col-md-2 mx-auto px-0">
-        <% unless current_user == user_result %>
-          <% if current_user.following?(user_result) %>
-            <%= link_to "フォロー解除",  user_relationships_path(user_result), method: :delete, class: "btn btn-outline-dark btn-block btn-sm" %>
-          <% else %>
-            <%= link_to "フォローする", user_relationships_path(user_result), method: :post, class: "btn btn-primary btn-block btn-sm" %>
-          <% end %>
-        <% end %>
-      </div>
+  <div class="row mb-4">
+    <div class="col-md-10 mx-auto px-0">
+      <%= link_to user_path(user_result.id), class: "text-dark", style: "text-decoration: none;" do %>
+        <%= image_tag user_result.get_profile_image(*25), class: "rounded-circle" %>
+        <%= user_result.name %>
+      <% end %>
     </div>
+    <div class="col-md-2 mx-auto px-0">
+      <% unless current_user == user_result %>
+        <% if current_user.following?(user_result) %>
+          <%= link_to "フォロー解除",  user_relationships_path(user_result), method: :delete, class: "btn btn-outline-dark btn-block btn-sm" %>
+        <% else %>
+          <%= link_to "フォローする", user_relationships_path(user_result), method: :post, class: "btn btn-primary btn-block btn-sm" %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
   <% end %>
 </div>

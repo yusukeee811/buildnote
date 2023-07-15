@@ -34,10 +34,9 @@ Rails.application.routes.draw do
       resource  :post_likes,    only:[:create, :destroy]
       resources :post_comments, only:[:create, :destroy]
 
-
       collection do
-        get 'search' => 'posts#search',  as: 'post_search'
         get 'hashtag/:name' => 'posts#hashtag',  as: 'hashtag_post'
+        get 'search' => 'hashtags#search',  as: 'hashtag_search'
       end
     end
 

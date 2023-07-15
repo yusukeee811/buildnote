@@ -25,7 +25,7 @@
 		<% @trainings.each do |training| %>
 		<tbody>
 			<tr>
-				<td><%= training.start_time.strftime("%Y-%m-%d %H:%M") %></td>
+				<td><%= training.start_time.strftime("%Y/%m/%d %H:%M") %></td>
 				<td><%= training.name %></td>
 				<td><%= training.set %></td>
 				<td><%= training.weight %></td>

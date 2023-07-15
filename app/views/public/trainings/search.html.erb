@@ -20,10 +20,33 @@
 
 </div>
 
-<div class="container mx-4 mt-4">
-  <% @training_results.each do |training_result| %>
-  <div class="row mb-2">
-    <%= training_result.name %>
+<div class="container mx-5 mt-5">
+  <div class="row">
+    <table class="training-table table table-hover">
+		  <thead class="bg-light">
+		  	<tr>
+		  		<th>日付</th>
+		   		<th>トレーニング</th>
+	  			<th>セット数</th>
+		  		<th>重量[kg]</th>
+	  			<th>回数</th>
+	  		</tr>
+  		</thead>
+	  	<% @training_results.each do |training_result| %>
+	  	<tbody>
+	  		<tr>
+	  			<td>
+	  			  <%= link_to trainings_path(training_result.id) do %>
+	  			    <%= training_result.start_time.strftime("%Y/%m/%d %H:%M") %>
+		  		  <% end %>
+	  			</td>
+		  		<td><%= training_result.name %></td>
+	  			<td><%= training_result.set %></td>
+	  			<td><%= training_result.weight %></td>
+		  		<td><%= training_result.repetition %></td>
+		  	</tr>
+	  	</tbody>
+  		<% end %>
+    </table>
   </div>
-  <% end %>
 </div>

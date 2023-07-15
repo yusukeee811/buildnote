@@ -1,0 +1,22 @@
+<div class="container">
+  <%= search_form_for @q, url: user_search_users_path do |f| %>
+  <div class="row">
+    <div class="col-md-4 pr-0">
+      <%= f.search_field :hashname_cont, placeholder: "#投稿", class: "form-control" %>
+    </div>
+
+    <%= render 'public/shared/search' %>
+
+  </div>
+  <% end %>
+</div>
+
+<div class="container mx-5 mt-5">
+  <% @post_results.each do |post_result| %>
+    <div class="row mb-4">
+      <%= link_to hashtag_post_posts_path(post_result.hashname) do %>
+        #<%= post_result.hashname %>&nbsp;(投稿数<%= post_result.posts.count %>)
+      <% end %>
+    </div>
+  <% end %>
+</div>

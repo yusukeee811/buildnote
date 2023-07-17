@@ -1,2 +1,43 @@
-<h1>Admin::Homes#top</h1>
-<p>Find me in app/views/admin/homes/top.html.erb</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-7 mx-auto px-0">
+      <h4 class="py-4 mb-0">
+        <span class="ml-3 font-weight-bold">
+          会員一覧
+        </span>
+      </h4>
+
+      <table class="training-table table table-hover">
+		    <thead class="bg-light">
+		    	<tr>
+		     	  <th>会員ID</th>
+		     		<th>ユーザー名</th>
+	  	  		<th>メールアドレス</th>
+		    		<th>ステータス</th>
+	  	  	</tr>
+  	  	</thead>
+	    	<% @users.each do |user| %>
+	    	<tbody>
+	    		<tr>
+	    			<td>
+	  	  		  <%= link_to admin_user_path(user.id) do %>
+	  	  		    <%= user.id %>
+		  	  	  <% end %>
+	  	  		</td>
+		    		<td><%= user.name %></td>
+	  	  		<td><%= user.email %></td>
+	  	  		<td class="<%= "status-#{user.status}" %>">
+	  	  		  <%= t("enums.user.status.#{user.status}") %>
+	  	  		</td>
+		    	</tr>
+	    	</tbody>
+  	  	<% end %>
+      </table>
+
+      <div class="row justify-content-center my-5">
+        <%= paginate @users %>
+      </div>
+
+    </div>
+  </div>
+</div>

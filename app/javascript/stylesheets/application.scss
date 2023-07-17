@@ -78,3 +78,15 @@ main {
   align-items: center;
   gap: 10px;
 }
+
+.status-active {
+  color: green;
+}
+
+.status-withdrawal {
+  color: lightgray;
+}
+
+.status-force_withdrawal {
+  color: red;
+}

@@ -55,6 +55,7 @@ Rails.application.routes.draw do
     resources :users, only:[:show, :edit, :update] do
       member do
         patch 'withdraw' => 'users#withdraw', as: 'user_withdraw'
+        get 'posts'      => 'users#posts',    as: 'user_posts'
       end
     end
     resources :posts, only:[:index]

@@ -1,0 +1,23 @@
+<% posts.order(created_at: :desc).each do |post| %>
+  <div class="card rounded mb-1">
+    <%= image_tag post.get_post_image, class: "card-img-top" %>
+    <div class="card-body border-top">
+      <div class="card-text">
+        <div class="row">
+          <div class="col-md-9">
+            <%= link_to admin_user_path(post.user.id), class: "text-dark", style: "text-decoration: none;" do %>
+              <%= image_tag post.user.get_profile_image(*25), class: "rounded-circle mr-1" %>
+              <%= post.user.name %>
+            <% end %>
+            &nbsp;&nbsp;<%= post.caption %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mx-0 mb-4" id="post-comments_<%= post.id %>">
+    <%= render 'public/post_comments/comment', post: post, post_comments: post_comments %>
+  </div>
+
+<% end %>

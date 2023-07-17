@@ -3,11 +3,11 @@
     <div class="col-md-5 mx-auto px-0">
       <h4 class="py-4 mb-0">
         <span class="ml-3 font-weight-bold">
-          投稿一覧
+          <%= @user.name %>の投稿一覧
         </span>
       </h4>
 
-      <%= render 'index', posts: @posts, post_comments: @post_comments %>
+      <%= render 'admin/posts/index', posts: @posts, post_comments: @post_comments %>
 
     </div>
   </div>

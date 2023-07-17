@@ -2,11 +2,13 @@ class Public::PostsController < ApplicationController
   def index
     @posts = Post.all
     @post_comment = PostComment.new
+    @post_comments = PostComment.all
   end
 
   def show
     @post = Post.find(params[:id])
     @post_comment = PostComment.new
+    @post_comments = PostComment.all
   end
 
   def new
@@ -39,6 +41,7 @@ class Public::PostsController < ApplicationController
     @tag = Hashtag.find_by(hashname: params[:name])
     @posts = @tag.posts.order(created_at: :desc)
     @post_comment = PostComment.new
+    @post_comments = PostComment.all
   end
 
   private

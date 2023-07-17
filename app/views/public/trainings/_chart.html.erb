@@ -1,0 +1,63 @@
+<canvas id="myChart"></canvas>
+
+<!-- グラフ作成 -->
+<script src="./graph.js"></script>
+
+<script>
+// データの抽出
+var trainings = [
+  <% @trainings.each do |training| %>
+    { name: '<%= training.name %>', volume: <%= training.volume %>, start_time: '<%= training.start_time.strftime('%Y-%m-%d %H:%M') %>' },
+  <% end %>
+  ];
+
+  // データのグループ化
+  var groupedData = {};
+    // トレーニング名でグループ化
+    trainings.forEach(function(training) {
+      if (groupedData.hasOwnProperty(training.name)) {
+        groupedData[training.name].push(training);
+      } else {
+        groupedData[training.name] = [training];
+      }
+    });
+
+  console.log(groupedData);
+
+  // ランダムな色を生成
+  function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
+
+  // データの準備
+  var datasets = [];
+  var uniqueNames = Object.keys(groupedData); // 一意のトレーニング名を取得
+
+  uniqueNames.forEach(function(name) {
+    var data = [];
+    var group = groupedData[name];
+
+    // 指定したトレーニング名のデータを抽出して配列に追加
+    group.forEach(function(training) {
+      data.push({
+        x: training.start_time,
+        y: training.volume
+      });
+    });
+
+    // ランダムな色をグラフに指定
+    var randomColor = getRandomColor();
+
+    datasets.push({
+    label: name,
+    data: data,
+    borderColor: randomColor,
+    backgroundColor: "rgba(0, 0, 0, 0)"
+  });
+});
+</script>

@@ -17,5 +17,7 @@ Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
-import '../stylesheets/simple_calendar.css'
-import './training.js';
+import "../stylesheets/simple_calendar.css";
+import "./training.js";
+import "chartkick/chart.js";
+import "./graph.js";

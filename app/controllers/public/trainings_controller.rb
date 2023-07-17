@@ -49,6 +49,10 @@ class Public::TrainingsController < ApplicationController
     @training_results = @q.result
   end
 
+  def graph
+    @trainings = Training.all
+  end
+
   private
 
   def training_params

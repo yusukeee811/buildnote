@@ -18,6 +18,7 @@
 				<th>セット数</th>
 				<th>重量[kg]</th>
 				<th>回数</th>
+				<th>ボリューム</th>
 				<th></th>
 				<th></th>
 			</tr>
@@ -30,6 +31,7 @@
 				<td><%= training.set %></td>
 				<td><%= training.weight %></td>
 				<td><%= training.repetition %></td>
+				<td><%= training.volume %></td>
 				<td>
 				  <%=link_to edit_training_path(training.id), class: "text-dark" do %>
 				    <i class="fas fa-edit"></i>
@@ -44,6 +46,7 @@
 		</tbody>
 		<% end %>
   </table>
+  <small>※ポリュームは重量(kg)x回数xセット数で計算しています。</small>
 
   <div class="row justify-content-center my-5">
     <%= paginate @trainings %>

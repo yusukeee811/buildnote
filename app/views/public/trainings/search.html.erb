@@ -30,6 +30,7 @@
 	  			<th>セット数</th>
 		  		<th>重量[kg]</th>
 	  			<th>回数</th>
+	  			<th>ボリューム</th>
 	  		</tr>
   		</thead>
 	  	<% @training_results.each do |training_result| %>
@@ -44,6 +45,7 @@
 	  			<td><%= training_result.set %></td>
 	  			<td><%= training_result.weight %></td>
 		  		<td><%= training_result.repetition %></td>
+		  		<td><%= training_result.volume %></td>
 		  	</tr>
 	  	</tbody>
   		<% end %>

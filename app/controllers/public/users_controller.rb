@@ -28,7 +28,7 @@ class Public::UsersController < ApplicationController
   def withdraw
     @user = current_user
     if @user.update(status: :withdrawal)
-      delete_related_data(@user) # 関連するデータの削除
+      @user.delete_related_data # 関連するデータの削除
       @user.update(email: '', name: '') # ユーザー名、メールアドレスを削除する
       reset_session
       redirect_to root_path, notice: "退会が完了しました。"
@@ -66,13 +66,6 @@ class Public::UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:name, :email, :image)
-  end
-
-  def delete_related_data(user)
-    user.posts.destroy_all
-    user.post_comments.destroy_all
-    user.post_likes.destroy_all
-    user.relationships.destroy_all
   end
 
   def set_q

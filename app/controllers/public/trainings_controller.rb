@@ -2,7 +2,7 @@ class Public::TrainingsController < ApplicationController
   before_action :set_q, only: [:search]
 
   def index
-    @trainings = Training.all.page(params[:page]).per(5)
+    @trainings = current_user.trainings.page(params[:page]).per(5)
   end
 
   def new

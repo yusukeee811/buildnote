@@ -6,7 +6,16 @@
   box-sizing: border-box;
 }
 
-//ヘッダーを右に配置//
+// フラッシュメッセージ //
+.alert {
+  color: red;
+}
+
+#error_explanation {
+  color: red;
+}
+
+// ヘッダーを右に配置 //
 header {
   position: fixed;
   top: 0;
@@ -29,14 +38,18 @@ main {
   overflow-y: auto;
   margin-left: 220px;
 }
-//ここまで//
+// ここまで //
 
-//ヘッダー編集//
+// ヘッダー編集 //
 .navbar {
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: initial;  //これがないと自動で justify-content: space-between;されてしまう。
+}
+
+.navbar-brand {
+  font-family: 'Montserrat', sans-serif;
 }
 
 .navbar-nav {
@@ -51,7 +64,7 @@ main {
 .nav-item:hover {
   background-color: #f0f0f0;
 }
-//ここまで//
+// ここまで //
 
 .top-img {
   width: 100%;

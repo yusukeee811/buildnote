@@ -10,6 +10,7 @@
     <% end %>
   <% end %>
 
+  <% if @trainings.present? %>
   <table class="training-table table mt-5">
 		<thead class="bg-light">
 			<tr>
@@ -47,6 +48,7 @@
 		<% end %>
   </table>
   <small>※ポリュームは重量(kg)x回数xセット数で計算しています。</small>
+  <% end %>
 
   <div class="row justify-content-center my-5">
     <%= paginate @trainings %>

@@ -9,6 +9,11 @@ Rails.application.routes.draw do
     sessions: 'admin/sessions'
   }
 
+  devise_scope :user do
+    # TIPS: ユーザー登録しっぱいのリダイレクトのエラーを防ぐ
+    get '/users', to: 'public/registrations#new'
+  end
+
   scope module: :public do
     root to: 'homes#top'
 
@@ -52,10 +57,11 @@ Rails.application.routes.draw do
   namespace :admin do
     root to: 'homes#top'
 
-    resources :users, only:[:show, :edit, :update] do
+    resources :users, only:[:show] do
       member do
-        patch 'withdraw' => 'users#withdraw', as: 'user_withdraw'
-        get 'posts'      => 'users#posts',    as: 'user_posts'
+        get 'unsubscribe' => 'users#unsubscribe', as: 'user_unsubscribe'
+        patch 'withdraw'  => 'users#withdraw',    as: 'user_withdraw'
+        get 'posts'       => 'users#posts',       as: 'user_posts'
       end
     end
     resources :posts, only:[:index]

@@ -3,21 +3,19 @@ class Admin::UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
-  def edit
+  def unsubscribe
     @user = User.find(params[:id])
-  end
-
-  def update
-    @user = User.find(params[:id])
-    if @user.update(user_params)
-      redirect_to user_path(@user), notice:"ユーザー情報を更新しました。"
-    else
-      flash.now[:notice] = "ユーザー情報の更新に失敗しました。"
-      render :edit
-    end
   end
 
   def withdraw
+    @user = User.find(params[:id])
+    if @user.update(status: :force_withdrawal)
+      @user.delete_related_data # 関連するデータの削除
+      redirect_to admin_root_path, notice: "ユーザーを強制退会させました。"
+    else
+      flash.now[:notice] = "強制退会処理に失敗しました。"
+      render :edit
+    end
   end
 
   def posts

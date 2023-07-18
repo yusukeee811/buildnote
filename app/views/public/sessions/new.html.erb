@@ -7,6 +7,8 @@
         </span>
       </h4>
 
+      <%= render 'layouts/flash' %>
+
       <div class="form-body p-4">
         <%= form_with model: @user, url: user_session_path do |f| %>
           <div class="form-group">

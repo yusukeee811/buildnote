@@ -59,4 +59,13 @@ class User < ApplicationRecord
     ["created_at", "email", "encrypted_password", "id", "name", "remember_created_at", "reset_password_sent_at", "reset_password_token", "status", "updated_at"]
   end
 
+  # 退会時にデータを削除する処理
+  def delete_related_data
+    self.posts.destroy_all
+    self.post_comments.destroy_all
+    self.post_likes.destroy_all
+    self.relationships.destroy_all
+  end
+
+
 end

@@ -1,6 +1,9 @@
 class Public::PostsController < ApplicationController
   def index
-    @posts = Post.all
+    # フォロー中のユーザーと自分の投稿を表示
+    followed_user_ids = current_user.followings.pluck(:id)
+    followed_user_ids << current_user.id
+    @posts = Post.where(user_id: followed_user_ids)
     @post_comment = PostComment.new
     @post_comments = PostComment.all
   end
@@ -21,7 +24,7 @@ class Public::PostsController < ApplicationController
     if @post.save
       redirect_to posts_path
     else
-      flash.now[:notice] = "投稿できません"
+      flash.now[:alert] = "投稿できません"
       render :new
     end
   end
@@ -32,7 +35,7 @@ class Public::PostsController < ApplicationController
       redirect_to posts_path, notice:"投稿削除しました"
     else
       @posts = Post.all
-      flash.now[:notice] = "投稿削除できません"
+      flash.now[:alert] = "投稿削除できません"
       render :index
     end
   end

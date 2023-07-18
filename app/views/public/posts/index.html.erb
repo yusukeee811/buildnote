@@ -10,8 +10,8 @@
       <% @posts.order(created_at: :desc).each do |post| %>
         <%= render 'index', post: post %>
 
-        <div class="row mx-0" id="post-comments_<%= post.id %>">
-          <%= render 'public/post_comments/comment', post: post, post_comments: @post_comments %>
+        <div class="row mx-2 mt-3" id="post-comments-count_<%= post.id %>">
+          <%= render 'public/post_comments/count', post: post, post_comments: @post_comments %>
         </div>
 
         <%= render 'public/post_comments/form', post: post, post_comment: @post_comment %>

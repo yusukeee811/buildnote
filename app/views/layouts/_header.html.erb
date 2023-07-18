@@ -109,6 +109,11 @@
             </span>
           <% end %>
         </li>
+
+        <% if controller_name != 'sessions' || action_name != 'new' %>
+          <%= render 'layouts/flash' %>
+        <% end %>
+
         <li class="nav-item ml-0 px-2">
           <%= link_to "https://github.com/yusukeee811/buildnote", target: "_blank", class: 'nav-link text-dark d-flex align-items-center' do %>
             <i class="fab fa-github-square fa-2x"></i>

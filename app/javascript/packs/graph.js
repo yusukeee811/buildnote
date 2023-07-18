@@ -17,9 +17,8 @@ document.addEventListener('turbolinks:load', function() {
           x: {
             type: 'time',
             time: {
-              displayFormats: {
-                hour: 'yyyy/MM/DD HH:mm'
-              }
+              unit: 'day', // 日単位で表示
+              tooltipFormat: 'YYYY/MM/DD', // ツールチップの表示形式
             },
             display: true,
             title: {

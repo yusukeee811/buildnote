@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container mt-4">
   <%= search_form_for @q, url: training_search_trainings_path do |f| %>
   <div class="row">
     <div class="col-md-4 pr-0">
@@ -7,8 +7,8 @@
         <%= f.label :start_time, "期間指定" %>
         <div class="d-flex">
           <%= f.date_field :start_time_gteq, class: "form-control" %>
-          <span>&nbsp;~&nbsp;</span>
-          <%= f.date_field :start_time_lteq, class: "form-control" %>
+            <span>&nbsp;~&nbsp;</span>
+          <%= f.date_field :start_time_lteq_end_of_day, class: "form-control" %>
         </div>
       </div>
     </div>

@@ -50,7 +50,7 @@ class Public::TrainingsController < ApplicationController
   end
 
   def graph
-    @trainings = Training.all
+    @trainings = current_user.trainings
   end
 
   private

@@ -11,6 +11,13 @@ var trainings = [
   <% end %>
   ];
 
+  // データのソート
+  trainings.sort(function(a, b) {
+    var dateA = new Date(a.start_time);
+    var dateB = new Date(b.start_time);
+    return dateA - dateB;
+  });
+
   // データのグループ化
   var groupedData = {};
     // トレーニング名でグループ化

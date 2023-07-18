@@ -22,13 +22,13 @@
   color: #fa8072;
 }
 
-.simple-calendar table td:nth-child(7) { /* 土曜日日付 */
-  color: #1e90ff;
-}
+/* .simple-calendar table td:nth-child(7) { /* 土曜日日付 */
+/*  color: #1e90ff;
+/* }
 
-.simple-calendar table td:nth-child(1) { /* 日曜日日付 */
-  color: #fa8072;
-}
+/* .simple-calendar table td:nth-child(1) { /* 日曜日日付 */
+/*   color: #fa8072;
+/* } */
 
 .simple-calendar table td {
   border: 1px solid #000;

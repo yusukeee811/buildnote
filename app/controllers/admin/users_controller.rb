@@ -15,8 +15,8 @@ class Admin::UsersController < ApplicationController
       @user.delete_related_data # 関連するデータの削除
       redirect_to admin_root_path, notice: "ユーザーを強制退会させました。"
     else
-      flash.now[:notice] = "強制退会処理に失敗しました。"
-      render :edit
+      flash.now[:alert] = "強制退会処理に失敗しました。"
+      render :unsubscribe
     end
   end
 

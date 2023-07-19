@@ -1,18 +1,19 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  has_one_attached :image
 
+  validate  :image_type
   validates :name, presence: true, uniqueness: true, length: { minimum: 5, maximum: 17 }
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  VALID_PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i.freeze
-  validates :password, format: { with: VALID_PASSWORD_REGEX, message: "は半角英数字を入力してください"}
+  # 有効にするとget_profile_imageがうまく動かないためコメントアウト(半角英数字)
+  # VALID_PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i.freeze
+  # validates :password, format: { with: VALID_PASSWORD_REGEX, message: "は半角英数字を入力してください"}
 
   enum status: { active: 0, withdrawal: 1, force_withdrawal: 2 }
-
-  has_one_attached :image
 
   has_many :posts,         dependent: :destroy
   has_many :post_likes,    dependent: :destroy
@@ -73,5 +74,12 @@ class User < ApplicationRecord
     self.relationships.destroy_all
   end
 
+  private
+
+  def image_type
+    if image.present? && !image.blob.content_type.in?(%('image/jpeg image/png'))
+      errors.add(:image, 'はJPEGまたはPNG形式を選択してアップロードしてください')
+    end
+  end
 
 end

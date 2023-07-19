@@ -6,13 +6,9 @@
           新規投稿
         </span>
       </h4>
-      <% if @error_message.present? %>
-        <div class="flash">
-          <div class="alert alert-danger mb-0">
-            <%= @error_message %>
-          </div>
-        </div>
-      <% end %>
+
+      <%= render "layouts/error", error_message: @error_message %>
+
       <div class="form-body p-4">
       <%= form_with model: @post, local:true do |f| %>
         <div class="form-group">

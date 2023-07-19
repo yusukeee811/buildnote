@@ -15,9 +15,9 @@ class Public::UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update(user_params)
-      redirect_to user_path(@user), notice:"ユーザー情報を更新しました。"
+      redirect_to user_path(@user), notice:"ユーザー情報を更新しました"
     else
-      flash.now[:notice] = "ユーザー情報の更新に失敗しました。"
+      @error_message = @user.errors.full_messages.join(', ')
       render :edit
     end
   end
@@ -27,14 +27,13 @@ class Public::UsersController < ApplicationController
   end
 
   def withdraw
-    @user = current_user
-    if @user.update(status: :withdrawal)
+    @user = User.find(params[:id])
+    if @user.update_columns(status: :withdrawal, email: nil, name: nil) #ユーザー名、メールアドレスを削除する
       @user.delete_related_data # 関連するデータの削除
-      @user.update(email: '', name: '') # ユーザー名、メールアドレスを削除する
       reset_session
-      redirect_to root_path, notice: "退会が完了しました。"
+      redirect_to root_path, notice: "退会が完了しました"
     else
-      flash.now[:notice] = "退会処理に失敗しました。"
+      flash.now[:alert] = "退会処理に失敗しました"
       render :unsubscribe
     end
   end
@@ -47,7 +46,7 @@ class Public::UsersController < ApplicationController
 
   def ensure_normal_user
     if current_user.email == 'guest@example.com'
-      redirect_to user_path(current_user), notice: 'ゲストユーザーの更新・削除はできません。'
+      redirect_to user_path(current_user), alert: 'ゲストユーザーの更新・削除はできません。'
     end
   end
 

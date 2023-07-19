@@ -1,25 +1,25 @@
 <div class="form-body p-4">
   <%= form_with model: training, local:true do |f| %>
     <div class="start-time-field">
-      <%= f.label :start_time, "開始時間" %> <br>
+      <%= f.label :start_time, "開始時間" %>
       <%= f.datetime_select :start_time, autofocus: true, class: "form-control" %>
     </div>
     <div class="training-field mt-3">
-      <%= f.label :name, "トレーニング名" %> <br>
+      <%= f.label :name, "トレーニング名" %>
       <%= f.text_field :name, autocomplete: "name", class: "form-control" %>
     </div>
     <div class="set-field mt-3">
-      <%= f.label :set, "セット数" %> <br>
-      <%= f.number_field :set, min: 1, max: 10, class: "form-control" %>
+      <%= f.label :set, "セット数" %>
+      <%= f.number_field :set, min: 1, max: 100, class: "form-control" %>
     </div>
     <div class="weight-and-rep-fields container-flex mt-3">
       <div class="weight-field">
-        <%= f.label :weight, "重量[kg]" %> <br>
+        <%= f.label :weight, "重量[kg]" %>
         <%= f.text_field :weight, class: "form-control" %>
       </div>
       <div class="rep-field">
-        <%= f.label :repetition, "回数" %> <br>
-        <%= f.number_field :repetition, min: 1, class: "form-control" %>
+        <%= f.label :repetition, "回数" %>
+        <%= f.number_field :repetition, min: 1, max: 500, class: "form-control" %>
       </div>
     </div>
     <div class="form-group">

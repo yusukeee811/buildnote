@@ -16,7 +16,7 @@ class Public::TrainingsController < ApplicationController
     if @training.save
       redirect_to trainings_path, notice:"トレーニングデータを追加しました"
     else
-      flash.now[:alert] = "トレーニングデータ追加に失敗しました"
+      @error_message = @training.errors.full_messages.join(', ')
       render :new
     end
   end
@@ -40,7 +40,7 @@ class Public::TrainingsController < ApplicationController
     if @training.destroy
       redirect_to trainings_path, notice:"トレーニングデータを削除しました"
     else
-      @trainings = Training.all.page(params[:page]).per(5)
+      @trainings = current_user.trainings.page(params[:page]).per(5)
       flash.now[:alert] = "トレーニングデータ削除に失敗しました"
       render :index
     end

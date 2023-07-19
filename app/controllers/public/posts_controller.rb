@@ -35,7 +35,9 @@ class Public::PostsController < ApplicationController
     if @post.destroy
       redirect_to posts_path, notice:"投稿を削除しました"
     else
-      @posts = Post.all
+      followed_user_ids = current_user.followings.pluck(:id)
+      followed_user_ids << current_user.id
+      @posts = Post.where(user_id: followed_user_ids)
       flash.now[:alert] = "投稿削除に失敗しました"
       render :index
     end

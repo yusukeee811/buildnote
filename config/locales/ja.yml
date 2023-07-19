@@ -7,6 +7,12 @@ ja:
         caption: コメント
       user:
         image: 画像
+      training:
+        name: トレーニング名
+        weight: 重量
+        repetition: 回数
+        set: セット数
+        start_time: 開始時間
     errors:
       messages:
         record_invalid: 'バリデーションに失敗しました: %{errors}'

@@ -26,7 +26,7 @@ class Public::PostsController < ApplicationController
     if @post.save
       redirect_to posts_path
     else
-      flash.now[:alert] = "投稿できません"
+      @error_message = @post.errors.full_messages.join(', ')
       render :new
     end
   end

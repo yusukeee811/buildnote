@@ -2,11 +2,12 @@ class Post < ApplicationRecord
   has_one_attached :image
 
   belongs_to :user
-  has_many :post_likes,     dependent: :destroy
-  has_many :post_comments,  dependent: :destroy
+  has_many :post_likes,    dependent: :destroy
+  has_many :post_comments, dependent: :destroy
   has_and_belongs_to_many :hashtags
 
-  validates :image, presence:true
+  validate  :image_type
+  validates :caption, length: { maximum: 31 }
 
   def get_post_image(*size)
     if !size.empty?
@@ -38,6 +39,16 @@ class Post < ApplicationRecord
     hashtags.uniq.map do |hashtag|
       tag = Hashtag.find_or_create_by(hashname: hashtag.downcase.delete('#'))
       post.hashtag << tag
+    end
+  end
+
+  private
+
+  def image_type
+    if !image.blob
+      errors.add(:image, 'をアップロードしてください')
+    elsif !image.blob.content_type.in?(%('image/jpeg image/png'))
+      errors.add(:image, 'はJPEGまたはPNG形式を選択してアップロードしてください')
     end
   end
 

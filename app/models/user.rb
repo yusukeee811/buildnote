@@ -1,8 +1,14 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+
+  validates :name, presence: true, uniqueness: true, length: { minimum:5, maximum:15 }
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
+  VALID_PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i.freeze
+  validates :password, format: { with: VALID_PASSWORD_REGEX, message: "は半角英数字を入力してください"}
 
   enum status: { active: 0, withdrawal: 1, force_withdrawal: 2 }
 

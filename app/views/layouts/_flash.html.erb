@@ -1,5 +1,7 @@
-<div class="flash mt-auto">
+<div class="flash">
   <% flash.each do |key, value| %>
-    <div class="<%= key %> mb-0"><%= value %></div>
+    <% key = "secondary" if key == "notice" %>
+    <% key = "danger" if key == "alert" %>
+    <div class="alert alert-<%= key %> mb-0"><%= value %></div>
   <% end %>
 </div>

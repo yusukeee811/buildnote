@@ -20,7 +20,7 @@
     <div class="body-container container-fluid px-0">
       <%= render 'layouts/header' %>
       <main>
-        <% if controller_name != 'homes' || action_name != 'top' %>
+        <% if controller_name != 'sessions' || action_name != 'new' %>
           <%= render 'layouts/flash' %>
         <% end %>
         <%= yield %>

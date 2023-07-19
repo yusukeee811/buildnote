@@ -68,10 +68,12 @@ class User < ApplicationRecord
 
   # 退会時にデータを削除する処理
   def delete_related_data
-    self.posts.destroy_all
-    self.post_comments.destroy_all
-    self.post_likes.destroy_all
-    self.relationships.destroy_all
+    ActiveRecord::Base.transaction do #データベースロック回避
+      self.posts.destroy_all
+      self.post_comments.destroy_all
+      self.post_likes.destroy_all
+      self.relationships.destroy_all
+    end
   end
 
   private

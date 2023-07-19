@@ -14,9 +14,9 @@ class Public::TrainingsController < ApplicationController
     @training = Training.new(training_params)
     @training.user_id = current_user.id
     if @training.save
-      redirect_to trainings_path, notice:"トレーニングデータを追加しました。"
+      redirect_to trainings_path, notice:"トレーニングデータを追加しました"
     else
-      flash.now[:notice] = "トレーニングデータを追加できません。"
+      flash.now[:alert] = "トレーニングデータ追加に失敗しました"
       render :new
     end
   end
@@ -28,9 +28,9 @@ class Public::TrainingsController < ApplicationController
   def update
     @training = Training.find(params[:id])
     if @training.update(training_params)
-      redirect_to trainings_path(@training.id), notice: "トレーニングデータを更新しました。"
+      redirect_to trainings_path(@training.id), notice: "トレーニングデータを更新しました"
     else
-      flash.now[:notice] = "トレーニングデータを更新できません。"
+      flash.now[:alert] = "トレーニングデータ更新に失敗しました"
       render :edit
     end
   end
@@ -38,10 +38,10 @@ class Public::TrainingsController < ApplicationController
   def destroy
     @training = Training.find(params[:id])
     if @training.destroy
-      redirect_to trainings_path, notice:"トレーニングデータを削除しました。"
+      redirect_to trainings_path, notice:"トレーニングデータを削除しました"
     else
       @trainings = Training.all.page(params[:page]).per(5)
-      flash.now[:notice] = "投稿削除できません"
+      flash.now[:alert] = "トレーニングデータ削除に失敗しました"
       render :index
     end
   end

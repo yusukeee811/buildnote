@@ -1,7 +1,11 @@
 class Training < ApplicationRecord
   belongs_to :user
 
-  validates :comment, presence:true
+  validates :name,       presence: true, length: { maximum: 30 }
+  validates :weight,     presence: true, numericality: { less_than_or_equal_to: 1000 }
+  validates :repetition, presence: true, numericality: { less_than_or_equal_to: 500 }
+  validates :set,        presence: true, numericality: { less_than_or_equal_to: 100 }
+  validates :start_time, presence: true
 
   def self.ransackable_attributes(auth_object = nil)
     ["created_at", "id", "name", "repetition", "set", "start_time", "updated_at", "user_id", "weight"]

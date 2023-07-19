@@ -1,4 +1,5 @@
 class Public::HashtagsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_q, only: [:search]
 
   def search

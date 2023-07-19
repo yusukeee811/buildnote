@@ -1,4 +1,5 @@
 class Public::UsersController < ApplicationController
+  before_action :authenticate_user!, except: [:create_guest]
   before_action :ensure_normal_user, only: [:update, :withdraw]
   before_action :set_q, only: [:search]
 

@@ -6,6 +6,8 @@ class Post < ApplicationRecord
   has_many :post_comments,  dependent: :destroy
   has_and_belongs_to_many :hashtags
 
+  validates :image, presence:true
+
   def get_post_image(*size)
     if !size.empty?
       image.variant(resize: size)

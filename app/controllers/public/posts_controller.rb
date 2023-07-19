@@ -1,4 +1,6 @@
 class Public::PostsController < ApplicationController
+  before_action :authenticate_user!
+
   def index
     # フォロー中のユーザーと自分の投稿を表示
     followed_user_ids = current_user.followings.pluck(:id)

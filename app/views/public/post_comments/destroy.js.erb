@@ -1,2 +1,2 @@
-$("#post-comments_<%= @post.id %>").html("<%= j(render 'public/post_comments/comment', post: @post, post_comment: @post_comment) %>");
-$("#post-comments-count_<%= @post.id %>").html("<%= j(render 'public/post_comments/count', post: @post, post_comment: @post_comment) %>");
+$("#post-comments_<%= @post.id %>").html("<%= j(render 'public/post_comments/comment', post: @post) %>");
+$("#post-comments-count_<%= @post.id %>").html("<%= j(render 'public/post_comments/count', post: @post) %>");

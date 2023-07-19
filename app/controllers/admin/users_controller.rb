@@ -13,9 +13,9 @@ class Admin::UsersController < ApplicationController
     @user = User.find(params[:id])
     if @user.update(status: :force_withdrawal)
       @user.delete_related_data # 関連するデータの削除
-      redirect_to admin_root_path, notice: "ユーザーを強制退会させました。"
+      redirect_to admin_root_path, notice: "ユーザーを強制退会させました"
     else
-      flash.now[:alert] = "強制退会処理に失敗しました。"
+      flash.now[:alert] = "強制退会処理に失敗しました"
       render :unsubscribe
     end
   end

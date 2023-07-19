@@ -7,7 +7,6 @@ class Public::PostsController < ApplicationController
     followed_user_ids << current_user.id
     @posts = Post.where(user_id: followed_user_ids)
     @post_comment = PostComment.new
-    @post_comments = PostComment.all
   end
 
   def show
@@ -34,7 +33,7 @@ class Public::PostsController < ApplicationController
   def destroy
     @post = Post.find(params[:id])
     if @post.destroy
-      redirect_to posts_path, notice:"投稿削除しました"
+      redirect_to posts_path, notice:"投稿を削除しました"
     else
       @posts = Post.all
       flash.now[:alert] = "投稿削除に失敗しました"
@@ -46,7 +45,6 @@ class Public::PostsController < ApplicationController
     @tag = Hashtag.find_by(hashname: params[:name])
     @posts = @tag.posts.order(created_at: :desc)
     @post_comment = PostComment.new
-    @post_comments = PostComment.all
   end
 
   private

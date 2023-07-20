@@ -1,5 +1,6 @@
 class Public::UsersController < ApplicationController
   before_action :authenticate_user!, except: [:create_guest]
+  before_action :is_matching_login_user, only: [:edit, :update, :unsubscribe, :withdraw, :likes]
   before_action :ensure_normal_user, only: [:update, :withdraw]
   before_action :set_q, only: [:search]
 
@@ -66,6 +67,13 @@ class Public::UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:name, :email, :image)
+  end
+
+  def is_matching_login_user
+    user = User.find(params[:id])
+    unless user.id == current_user.id
+      redirect_to posts_path
+    end
   end
 
   def set_q

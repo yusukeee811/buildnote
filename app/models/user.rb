@@ -4,14 +4,16 @@ class User < ApplicationRecord
   has_one_attached :image
 
   validate  :image_type
-  validates :name, presence: true, uniqueness: true, length: { minimum: 5, maximum: 17 }
+
+  VALID_NAME_REGEX = /\A[a-zA-Z0-9_-]+\z/.freeze
+  validates :name, presence: true, uniqueness: true, length: { minimum: 5, maximum: 17 }, format: { with: VALID_NAME_REGEX, message: "は半角英数字(ハイフン-アンダーバー_含む)で入力してください"}
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  # 有効にするとget_profile_imageがうまく動かないためコメントアウト(半角英数字)
-  # VALID_PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i.freeze
-  # validates :password, format: { with: VALID_PASSWORD_REGEX, message: "は半角英数字を入力してください"}
+  # nilでもバリデーションが行われるようにallow_blank: trueを記述する
+  VALID_PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i.freeze
+  validates :password, format: { with: VALID_PASSWORD_REGEX, message: "は半角英数字混合で入力してください", allow_blank: true }
 
   enum status: { active: 0, withdrawal: 1, force_withdrawal: 2 }
 

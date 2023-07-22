@@ -32,7 +32,7 @@ class Public::UsersController < ApplicationController
     if @user.update_columns(status: :withdrawal, email: nil, name: nil) #ユーザー名、メールアドレスを削除する
       @user.delete_related_data # 関連するデータの削除
       reset_session
-      redirect_to root_path, notice: "退会が完了しました"
+      redirect_to root_path, notice: "退会処理が完了しました。ご利用ありがとうございました。"
     else
       flash.now[:alert] = "退会処理に失敗しました"
       render :unsubscribe

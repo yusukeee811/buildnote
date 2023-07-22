@@ -47,7 +47,7 @@ class Public::UsersController < ApplicationController
 
   def ensure_normal_user
     if current_user.email == 'guest@example.com'
-      redirect_to user_path(current_user), alert: 'ゲストユーザーの更新・削除はできません'
+      redirect_to user_path(current_user), alert: 'ゲストユーザーの更新・退会はできません'
     end
   end
 

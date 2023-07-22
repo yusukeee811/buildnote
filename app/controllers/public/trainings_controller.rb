@@ -30,7 +30,7 @@ class Public::TrainingsController < ApplicationController
     if @training.update(training_params)
       redirect_to trainings_path(@training.id), notice: "トレーニングデータを更新しました"
     else
-      flash.now[:alert] = "トレーニングデータ更新に失敗しました"
+      @error_message = @training.errors.full_messages.join(', ')
       render :edit
     end
   end

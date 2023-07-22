@@ -5,7 +5,7 @@
       <%= f.datetime_select :start_time, autofocus: true, class: "form-control" %>
     </div>
     <div class="training-field mt-3">
-      <%= f.label :name, "トレーニング名" %>
+      <%= f.label :name, "トレーニング名(30文字以内)" %>
       <%= f.text_field :name, autocomplete: "name", class: "form-control" %>
     </div>
     <div class="set-field mt-3">
@@ -14,7 +14,7 @@
     </div>
     <div class="weight-and-rep-fields container-flex mt-3">
       <div class="weight-field">
-        <%= f.label :weight, "重量[kg]" %>
+        <%= f.label :weight, "重量[kg](数字のみ入力)" %>
         <%= f.text_field :weight, class: "form-control" %>
       </div>
       <div class="rep-field">

@@ -38,17 +38,12 @@ class User < ApplicationRecord
     end
   end
 
-  def get_profile_image(*size)
+  def get_profile_image(width, height)
     unless image.attached?
       file_path = Rails.root.join('app/assets/images/no-image.png')
       image.attach(io: File.open(file_path), filename: 'no-image.png', content_type: 'image/png')
     end
-
-    if !size.empty?
-      image.variant(resize: size)
-    else
-      image
-    end
+      image.variant(resize_to_fill: [width, height]).processed
   end
 
   # フォロー時の処理

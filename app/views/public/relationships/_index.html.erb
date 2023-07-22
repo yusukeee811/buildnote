@@ -3,7 +3,7 @@
     <div class="row mb-2">
       <div class="col-md-8 mx-auto px-0">
         <%= link_to user_path(user.id), class: "text-dark", style: "text-decoration: none;" do %>
-          <%= image_tag user.get_profile_image(*25), class: "rounded-circle" %>
+          <%= image_tag user.get_profile_image(25, 25), class: "rounded-circle" %>
           <%= user.name %>
         <% end %>
       </div>

@@ -2,7 +2,7 @@
 <% post.post_comments.each do |post_comment| %>
   <div class="col-md-9 mt-3">
     <%= link_to user_path(post_comment.user.id), class: "text-dark", style: "text-decoration: none;" do %>
-      <%= image_tag post_comment.user.get_profile_image(*25), class: "rounded-circle mr-1" %>
+      <%= image_tag post_comment.user.get_profile_image(25, 25), class: "rounded-circle mr-1" %>
       <%= post_comment.user.name %>
     <% end %>
     &nbsp;&nbsp;<%= post_comment.comment %>

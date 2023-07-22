@@ -18,12 +18,14 @@ document.addEventListener('turbolinks:load', function() {
             type: 'time',
             time: {
               unit: 'day', // 日単位で表示
-              tooltipFormat: 'YYYY/MM/DD', // ツールチップの表示形式
+              displayFormats: {
+                day: 'yyyy/MM/dd', // 日付の表示形式を指定
+              },
             },
             display: true,
             title: {
               display: true,
-              text: '日時'
+              text: '日付'
             }
           },
           y: {

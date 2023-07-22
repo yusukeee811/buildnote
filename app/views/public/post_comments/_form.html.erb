@@ -2,7 +2,7 @@
 <%= form_with model: [post, post_comment], local: false do |f| %>
 <div class="row my-3">
   <div class="col-md-10 pr-1">
-    <%= f.text_field :comment, rows: '5', placeholder: "コメントする", class: "form-control" %>
+    <%= f.text_field :comment, rows: '5', placeholder: "コメント(20文字以内)", class: "form-control" %>
   </div>
   <div class="col-md-2 pl-1">
     <button type="submit" class="btn btn-block btn-primary">

@@ -4,7 +4,7 @@ ja:
     attributes:
       post:
         image: 画像
-        caption: コメント
+        caption: キャプション
       user:
         image: 画像
       training:

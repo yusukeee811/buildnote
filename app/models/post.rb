@@ -7,7 +7,7 @@ class Post < ApplicationRecord
   has_and_belongs_to_many :hashtags
 
   validate  :image_type
-  validates :caption, length: { maximum: 31 }
+  validates :caption, length: { maximum: 50 }
 
   def get_post_image(*size)
     if !size.empty?

@@ -5,14 +5,14 @@
   <div class="card-body border-top">
     <div class="card-text">
       <div class="row">
-        <div class="col-md-9">
+        <div class="col-md-9 pr-0">
           <%= link_to user_path(post.user.id), class: "text-dark", style: "text-decoration: none;" do %>
             <%= image_tag post.user.get_profile_image(25, 25), class: "rounded-circle mr-1" %>
             <%= post.user.name %>
           <% end %>
           &nbsp;&nbsp;<%= render_with_hashtags(post.caption) %>
         </div>
-        <div class="col-md-3 text-right">
+        <div class="col-md-3 text-right pl-0">
 
           <!--いいねボタン実装-->
           <span id="like-btn_<%= post.id %>">

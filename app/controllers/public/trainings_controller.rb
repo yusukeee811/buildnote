@@ -61,7 +61,7 @@ class Public::TrainingsController < ApplicationController
   end
 
   def set_q
-    @q = Training.ransack(params[:q])
+    @q = current_user.trainings.ransack(params[:q])
   end
 
 end

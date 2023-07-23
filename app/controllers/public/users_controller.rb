@@ -32,10 +32,10 @@ class Public::UsersController < ApplicationController
 
   def withdraw
     @user = User.find(params[:id])
-    if @user.update_columns(status: :withdrawal, email: nil, name: nil) #ユーザー名、メールアドレスを削除する
-      @user.delete_related_data # 関連するデータの削除
+    if @user.update(status: :withdrawal)
       reset_session
       redirect_to root_path, notice: "退会処理が完了しました。ご利用ありがとうございました。"
+      @user.destroy # ユーザーデータの削除
     else
       flash.now[:alert] = "退会処理に失敗しました"
       render :unsubscribe

@@ -42,6 +42,8 @@ class Public::SessionsController < Devise::SessionsController
 
     alert_message = if user.status == "force_withdrawal"
                       "このアカウントは停止されました"
+                    else
+                      "すでに退会しています"
                     end
     redirect_to request.referer, alert: alert_message
   end

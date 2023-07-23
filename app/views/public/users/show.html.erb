@@ -1,61 +1,63 @@
-<!-- ユーザー情報 -->
-<div class="container pb-5 border-bottom">
-  <div class="row">
-    <div class="col-md-6 mx-auto">
-      <h2 class="py-4 mb-0">
-        <%= @user.name %>
-      </h2>
+<% if @user.active? %>
+  <!-- ユーザー情報 -->
+  <div class="container pb-5 border-bottom">
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+        <h2 class="py-4 mb-0">
+          <%= @user.name %>
+        </h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3 ml-auto">
+        <%= image_tag @user.get_profile_image(150, 150), class: "rounded-circle" %>
+      </div>
+      <div class="col-md-3 mr-auto">
+        <div class="user-info text-center mb-3">
+          投稿数 <%= @user.posts.count %>
+        </div>
+        <div class="user-info text-center">
+          <% if current_user == @user %>
+            <div class="d-inline-block mr-mb">
+              フォロー数
+            </div>
+            <%= link_to user_followings_path(@user.id) do %>
+              <%= @user.followings.count %>
+            <% end %>
+            <div class="d-inline-block mx-2 mb">
+              フォロワー数
+            </div>
+            <%= link_to user_followers_path(@user.id) do %>
+              <%= @user.followers.count %>
+            <% end %>
+          <% end %>
+        </div>
+        <div class="user-edit mt-5">
+          <% unless current_user == @user %>
+            <% if current_user.following?(@user) %>
+              <%= link_to "フォロー解除",  user_relationships_path(@user), method: :delete, class: "btn btn-outline-dark btn-block btn-sm" %>
+            <% else %>
+              <%= link_to "フォローする", user_relationships_path(@user), method: :post, class: "btn btn-primary btn-block btn-sm" %>
+            <% end %>
+          <% end %>
+          <% if current_user == @user %>
+            <%= link_to "ユーザー情報を編集する", edit_user_path(@user), class: "btn btn-primary btn-block btn-sm" %>
+          <% end %>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="row">
-    <div class="col-md-3 ml-auto">
-      <%= image_tag @user.get_profile_image(150, 150) %>
-    </div>
-    <div class="col-md-3 mr-auto">
-      <div class="user-info text-center mb-3">
-        投稿数 <%= @user.posts.count %>
-      </div>
-      <div class="user-info text-center">
-        <% if current_user == @user %>
-          <div class="d-inline-block mr-mb">
-            フォロー数
-          </div>
-          <%= link_to user_followings_path(@user.id) do %>
-            <%= @user.followings.count %>
-          <% end %>
-          <div class="d-inline-block mx-2 mb">
-            フォロワー数
-          </div>
-          <%= link_to user_followers_path(@user.id) do %>
-            <%= @user.followers.count %>
-          <% end %>
-        <% end %>
-      </div>
-      <div class="user-edit mt-5">
-        <% unless current_user == @user %>
-          <% if current_user.following?(@user) %>
-            <%= link_to "フォロー解除",  user_relationships_path(@user), method: :delete, class: "btn btn-outline-dark btn-block btn-sm" %>
-          <% else %>
-            <%= link_to "フォローする", user_relationships_path(@user), method: :post, class: "btn btn-primary btn-block btn-sm" %>
-          <% end %>
-        <% end %>
-        <% if current_user == @user %>
-          <%= link_to "ユーザー情報を編集する", edit_user_path(@user), class: "btn btn-primary btn-block btn-sm" %>
-        <% end %>
-      </div>
-    </div>
-  </div>
-</div>
 
-<!-- ユーザー投稿一覧 -->
-<div class="container">
-  <div class="row">
-    <% @posts.order(created_at: :desc).each do |post| %>
-      <div class="col-md-4 p-4">
-        <%= link_to post_path(post.id) do %>
-          <%= image_tag post.get_post_image, class: "user-post" %>
-        <% end %>
-      </div>
-    <% end %>
+  <!-- ユーザー投稿一覧 -->
+  <div class="container">
+    <div class="row">
+      <% @posts.order(created_at: :desc).each do |post| %>
+        <div class="col-md-4 p-4">
+          <%= link_to post_path(post.id) do %>
+            <%= image_tag post.get_post_image, class: "user-post" %>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
   </div>
-</div>
+<% end %>

@@ -49,8 +49,8 @@ class Public::UsersController < ApplicationController
   end
 
   def ensure_normal_user
-    if current_user.email == 'guest@example.com'
-      redirect_to user_path(current_user), alert: 'ゲストユーザーの更新・退会はできません'
+    if current_user.email == "guest@example.com"
+      redirect_to user_path(current_user), alert: "ゲストユーザーの更新・退会はできません"
     end
   end
 
@@ -63,6 +63,7 @@ class Public::UsersController < ApplicationController
   end
 
   def search
+    @q.status_eq = "active"
     @user_results = @q.result
   end
 

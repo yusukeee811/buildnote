@@ -4,7 +4,8 @@ class Post < ApplicationRecord
   belongs_to :user
   has_many :post_likes,    dependent: :destroy
   has_many :post_comments, dependent: :destroy
-  has_and_belongs_to_many :hashtags
+  has_many :hashtag_posts, dependent: :destroy
+  has_many :hashtags, through: :hashtag_posts
 
   validate  :image_type
   validates :caption, length: { maximum: 50 }

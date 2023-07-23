@@ -1,5 +1,7 @@
 class Hashtag < ApplicationRecord
-  has_and_belongs_to_many :posts
+  has_many :hashtag_posts, dependent: :destroy
+  has_many :posts, through: :hashtag_posts
+  scope :with_posts, -> { joins(:posts).distinct }
 
   validates :hashname, presence: true, length: {maximum:99}
 

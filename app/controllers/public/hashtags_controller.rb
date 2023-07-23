@@ -3,7 +3,7 @@ class Public::HashtagsController < ApplicationController
   before_action :set_q, only: [:search]
 
   def search
-    @post_results = @q.result
+    @post_results = @q.result.with_posts
   end
 
   private

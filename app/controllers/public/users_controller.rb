@@ -7,7 +7,7 @@ class Public::UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     unless @user.active?
-      flash[:alert] = "このアカウントは停止されています"
+      flash.now[:alert] = "このアカウントは停止されています"
     end
     @posts = @user.posts
   end

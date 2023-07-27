@@ -1,5 +1,40 @@
+.simple-calendar table {
+  -webkit-border-horizontal-spacing: 0px;
+  -webkit-border-vertical-spacing: 0px;
+  border-collapse: collapse;
+  box-sizing: border-box;
+  max-width: 100%;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.simple-calendar th {
+    border-collapse: collapse;
+}
+
+.simple-calendar table th {
+  border-bottom: 1px solid #000;
+  border-top: none;
+  text-align: center;
+}
+
+.simple-calendar td {
+  padding: 6px;
+  border: 1px solid #000;
+  width: 14%;
+  height: 80px;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space:nowrap;
+}
+
+.simple-calendar td:hover {
+  background-color: #f0f0f0;
+}
+
 .table-striped tbody tr:nth-of-type(odd) {
-    background-color: white;
+  background-color: white;
 }
 
 .calendar-heading {
@@ -30,22 +65,6 @@
 /*   color: #fa8072;
 /* } */
 
-.simple-calendar table td {
-  border: 1px solid #000;
-  width: 80px;
-  height: 100px;
-  box-sizing: border-box;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space:nowrap;
-}
-
-.simple-calendar table th {
-  border-bottom: 1px solid #000;
-  border-top: none;
-  text-align: center;
-}
-
 /* 前後の月の日付をグレースケールに変更 */
 .previous-month, .next-month{
   background-color: #d3d3d3;
@@ -59,22 +78,7 @@
   color: #808080;
 }
 
-.simple-calendar table td:hover {
-  background-color: #f0f0f0;
-}
-
 .today {
   background-color: #007bff;
   color: #ffffff !important;
 }
-
-
-
-
-
-
-
-
-
-
-

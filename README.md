@@ -108,13 +108,11 @@
 
 ![d053462477428aa4b7cab45e871ff9d7](https://github.com/yusukeee811/buildnote/assets/132319174/cf8692f9-5858-49b3-b232-e8ddbe49ea0d)
 
-ログイン画面、新規登録画面からもゲストログインできます。
-
-![61c7f0b6f13b253a399f9bb1377f2448](https://github.com/yusukeee811/buildnote/assets/132319174/94986303-94fd-485d-ab02-8b85c7b7a3f1)
-
-![471bdf00de5f9a338515e9adc67cc1b8](https://github.com/yusukeee811/buildnote/assets/132319174/2aa5cec8-fb67-448b-a292-b7acc723f639)
-
 # 会員機能
+投稿がどの会員によるものか明らかにします。<br>
+タイムライン、フォロー・フォロワー情報など、会員ごとにカスタマイズされた情報を表示します。
+
+![4134e5c183126086f3300143b0cdc14c](https://github.com/yusukeee811/buildnote/assets/132319174/09fde7ee-dc6f-4d18-a62f-55c15ed6e9df)
 
 
 # 使用素材

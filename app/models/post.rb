@@ -6,6 +6,7 @@ class Post < ApplicationRecord
   has_many :post_comments, dependent: :destroy
   has_many :hashtag_posts, dependent: :destroy
   has_many :hashtags, through: :hashtag_posts
+  has_many :tags, dependent: :destroy
 
   validate  :image_type
   validates :caption, length: { maximum: 50 }

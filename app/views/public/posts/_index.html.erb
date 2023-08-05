@@ -1,4 +1,20 @@
 <div class="card rounded">
+  <div class="card-body border-bottom">
+    <div class="card-text">
+      <div class="row">
+        <div class="col-md-12">
+          <%= link_to user_path(post.user.id), class: "text-dark", style: "text-decoration: none;" do %>
+            <%= image_tag post.user.get_profile_image(25, 25), class: "rounded-circle mr-1" %>
+            <%= post.user.name %>
+          <% end %>
+          &nbsp;&nbsp;
+          <% post.tags.each do |tag| %>
+            <span class="label"><%= tag.name %></span>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
   <%= link_to post_path(post.id) do %>
     <%= image_tag post.get_post_image, class: "card-img-top" %>
   <% end %>
@@ -6,11 +22,7 @@
     <div class="card-text">
       <div class="row">
         <div class="col-md-9 pr-0">
-          <%= link_to user_path(post.user.id), class: "text-dark", style: "text-decoration: none;" do %>
-            <%= image_tag post.user.get_profile_image(25, 25), class: "rounded-circle mr-1" %>
-            <%= post.user.name %>
-          <% end %>
-          &nbsp;&nbsp;<%= render_with_hashtags(post.caption) %>
+          <%= render_with_hashtags(post.caption) %>
         </div>
         <div class="col-md-3 text-right pl-0">
 

@@ -1,7 +1,6 @@
 <% posts.order(created_at: :desc).each do |post| %>
   <div class="card rounded mb-1">
-    <%= image_tag post.get_post_image, class: "card-img-top" %>
-    <div class="card-body border-top">
+    <div class="card-body border-bottom">
       <div class="card-text">
         <div class="row">
           <div class="col-md-12">
@@ -9,7 +8,16 @@
               <%= image_tag post.user.get_profile_image(25, 25), class: "rounded-circle mr-1" %>
               <%= post.user.name %>
             <% end %>
-            &nbsp;&nbsp;<%= post.caption %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <%= image_tag post.get_post_image, class: "card-img-top" %>
+    <div class="card-body border-top">
+      <div class="card-text">
+        <div class="row">
+          <div class="col-md-12">
+            <%= post.caption %>
           </div>
         </div>
       </div>

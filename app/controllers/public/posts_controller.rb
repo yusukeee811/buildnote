@@ -21,9 +21,9 @@ class Public::PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-    tags = Vision.get_image_data(post_params[:image])
     @post.user_id = current_user.id
     if @post.save
+      tags = Vision.get_image_data(post_params[:image])
       tags.each do |tag|
         @post.tags.create(name: tag)
       end

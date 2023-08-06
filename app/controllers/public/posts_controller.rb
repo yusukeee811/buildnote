@@ -23,7 +23,7 @@ class Public::PostsController < ApplicationController
     @post = Post.new(post_params)
     @post.user_id = current_user.id
     if @post.save
-      tags = Vision.get_image_data(post_params[:image])
+      tags = Vision.get_image_data(@post.image.download)
       tags.each do |tag|
         @post.tags.create(name: tag)
       end

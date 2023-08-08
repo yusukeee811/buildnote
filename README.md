@@ -112,7 +112,7 @@
 投稿がどの会員によるものか明らかにします。<br>
 タイムライン、フォロー・フォロワー情報など、会員ごとにカスタマイズされた情報を表示します。
 
-![会員機能](https://github.com/yusukeee811/buildnote/assets/132319174/09fde7ee-dc6f-4d18-a62f-55c15ed6e9df)
+![会員機能](https://github.com/yusukeee811/buildnote/assets/132319174/2bea77f9-14c0-42b3-876a-e8c8c780bccf)
 
 # 投稿機能
 ヘッダーの『投稿』から新規投稿ページに遷移します。

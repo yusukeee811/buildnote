@@ -135,6 +135,11 @@
 
 ![フォロー機能]()
 
+# コメント機能
+気になった投稿に対してリアクションし、コミュニケーションを活発化できます。
+
+![コメント機能]()
+
 # 使用素材
 - [ロゴジェネレーター](https://www.shopify.com/jp/tools/logo-maker)
 - [icon-icons.com](https://icon-icons.com/ja/)

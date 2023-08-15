@@ -140,6 +140,11 @@
 
 ![コメント機能]()
 
+# 投稿検索機能（ハッシュタグ検索）
+ 気になっているトピックに関する投稿をチェックできます。
+
+![投稿検索機能]()
+
 # 使用素材
 - [ロゴジェネレーター](https://www.shopify.com/jp/tools/logo-maker)
 - [icon-icons.com](https://icon-icons.com/ja/)

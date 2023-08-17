@@ -106,49 +106,51 @@
 ヘッダーからログインできます。 <br>
 ゲストログインした場合、ゲストユーザーの更新・退会はできません。
 
-![ゲストログイン]()
+![ゲストログイン](https://github.com/yusukeee811/buildnote/assets/132319174/e5d64a37-7521-43ec-8e3c-5f73ffc5a9bc)
 
 # 会員機能
 投稿がどの会員によるものか明らかにします。<br>
 タイムライン、フォロー・フォロワー情報など、会員ごとにカスタマイズされた情報を表示します。
 
-![会員機能]()
+![会員機能](https://github.com/yusukeee811/buildnote/assets/132319174/6d0aadb9-63c3-4124-a777-9bb356721a5c)
 
 # ユーザー検索機能
  知り合いを検索し、フォローできます。
 
-![ユーザー検索機能]()
+![ユーザー検索機能](https://github.com/yusukeee811/buildnote/assets/132319174/187705b3-9bfb-4b71-949c-b22665b6899e)
 
 # フォロー機能
 知り合いや気になる投稿をしている人をフォローし、自分が見たい情報を得ることができます。
 
-![フォロー機能]()
+![フォロー機能](https://github.com/yusukeee811/buildnote/assets/132319174/5cc50e84-572f-4324-b1a3-91c3a318642d)
 
 # 投稿機能
 ヘッダーの『投稿』から新規投稿ページに遷移します。
 会員が発信したい内容を発信できます。
 
-![投稿機能]()
+![投稿機能](https://github.com/yusukeee811/buildnote/assets/132319174/73f47fb8-c590-4d64-aa07-ca82a0c82cf2)
 
 # いいね機能
 気に入った投稿や留めておきたい投稿に対してリアクションできます。
 
-![いいね機能]()
+![いいね機能](https://github.com/yusukeee811/buildnote/assets/132319174/57150b98-4437-43fa-ace4-dc4a360f682b)
 
 # いいね一覧表示機能
 いいねした投稿を好きな時に閲覧できます。
 
-![いいね一覧表示]()
+![いいね一覧表示](https://github.com/yusukeee811/buildnote/assets/132319174/fc6dca9e-2e4d-4d43-b401-8606d0708011)
+
+
 
 # コメント機能
 気になった投稿に対してリアクションし、コミュニケーションを活発化できます。
 
-![コメント機能]()
+![コメント機能](https://github.com/yusukeee811/buildnote/assets/132319174/d348aa7c-c02d-4d46-a451-1e8d2276c03f)
 
 # 投稿検索機能（ハッシュタグ検索）
  気になっているトピックに関する投稿をチェックできます。
 
-![投稿検索機能]()
+![投稿検索機能](https://github.com/yusukeee811/buildnote/assets/132319174/2188ea64-5d23-4df2-9fbb-6342de64dd35)
 
 # 使用素材
 - [ロゴジェネレーター](https://www.shopify.com/jp/tools/logo-maker)

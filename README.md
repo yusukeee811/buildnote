@@ -106,7 +106,7 @@
 ヘッダーからログインできます。 <br>
 ゲストログインした場合、ゲストユーザーの更新・退会はできません。
 
-![ゲストログイン](https://github.com/yusukeee811/buildnote/assets/132319174/cf8692f9-5858-49b3-b232-e8ddbe49ea0d)
+![ゲストログイン](https://github.com/yusukeee811/buildnote/assets/132319174/bcc434db-1c4b-4949-9f25-da6eec82f8b9)
 
 # 会員機能
 投稿がどの会員によるものか明らかにします。<br>

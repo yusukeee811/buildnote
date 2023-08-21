@@ -164,6 +164,16 @@ https://github.com/yusukeee811/buildnote/assets/132319174/2188ea64-5d23-4df2-9fb
 ヘッダーの『グラフ』からグラフページに遷移します。<br>
 トレーニングデータからグラフを作成し、トレーニング成果を可視化することができます。
 
+# ユーザー管理機能
+管理者ページのログイン方法（/admin/sign_in) 管理者ページのログインに必要なメールアドレス及びパスワードは下記の通りです。 URLの後ろに/admin/sign_inをつけてください。
+
+```shell
+メールアドレス：admin@example.com パスワード:password
+```
+
+会員、の一覧や登録内容を確認します。不正な手段で登録した会員や、不適切な投稿を行う会員の利用停止が行えます。
+
+
 # 使用素材
 - [ロゴジェネレーター](https://www.shopify.com/jp/tools/logo-maker)
 - [icon-icons.com](https://icon-icons.com/ja/)

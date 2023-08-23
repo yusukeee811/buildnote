@@ -115,7 +115,7 @@ https://github.com/yusukeee811/buildnote/assets/132319174/4fa9180b-ebf0-4024-860
 https://github.com/yusukeee811/buildnote/assets/132319174/6d0aadb9-63c3-4124-a777-9bb356721a5c
 
 # ユーザー検索機能
- 知り合いを検索し、フォローできます。
+ヘッダーの『検索』から知り合いを検索し、フォローできます。
 
 https://github.com/yusukeee811/buildnote/assets/132319174/187705b3-9bfb-4b71-949c-b22665b6899e
 
@@ -136,19 +136,28 @@ https://github.com/yusukeee811/buildnote/assets/132319174/73f47fb8-c590-4d64-aa0
 https://github.com/yusukeee811/buildnote/assets/132319174/57150b98-4437-43fa-ace4-dc4a360f682b
 
 # いいね一覧表示機能
-いいねした投稿を好きな時に閲覧できます。
+ヘッダーの『いいね一覧』からいいねした投稿を好きな時に閲覧できます。
 
 https://github.com/yusukeee811/buildnote/assets/132319174/fc6dca9e-2e4d-4d43-b401-8606d0708011
 
 # コメント機能
-気になった投稿に対してリアクションし、コミュニケーションを活発化できます。
+気になった投稿に対してコメントし、コミュニケーションを活発化できます。
 
 https://github.com/yusukeee811/buildnote/assets/132319174/d348aa7c-c02d-4d46-a451-1e8d2276c03f
 
 # 投稿検索機能（ハッシュタグ検索）
- 気になっているトピックに関する投稿をチェックできます。
+ヘッダーの『検索』から気になっているトピックに関する投稿をチェックできます。
 
 https://github.com/yusukeee811/buildnote/assets/132319174/2188ea64-5d23-4df2-9fbb-6342de64dd35
+
+# カレンダー機能
+ヘッダーの『カレンダー』からトレーニング日を可視化し、継続的にトレーニングができているか確認できます。
+
+# トレーニング記録管理機能
+ヘッダーの『トレーニング記録』からセット数、回数、重量などのトレーニングデータを入力・保存できます。
+
+# カレンダー機能
+ヘッダーの『カレンダー』からトレーニング日を可視化し、継続的にトレーニングができているか確認できます。
 
 # 使用素材
 - [ロゴジェネレーター](https://www.shopify.com/jp/tools/logo-maker)

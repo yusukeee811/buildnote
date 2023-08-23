@@ -171,12 +171,12 @@ https://github.com/yusukeee811/buildnote/assets/132319174/77d6b977-0286-40b4-827
 # User Management
 Login method for the admin page (/admin/sign_in). The email address and password required to log in to the admin page are as follows. Add /admin/sign_in after the URL.
 
-#### email
+#### Email
 ```shell
 admin@example.com
 ```
 
-#### password
+#### Password
 ```shell
 password
 ```

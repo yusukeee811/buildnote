@@ -156,13 +156,19 @@ https://github.com/yusukeee811/buildnote/assets/132319174/2188ea64-5d23-4df2-9fb
 ヘッダーの『カレンダー』からカレンダーページに遷移します。<br>
 トレーニング日を可視化し、継続的にトレーニングができているか確認できます。
 
+<img width="1437" alt="カレンダー機能" src="https://github.com/yusukeee811/buildnote/assets/132319174/a443d3a9-2e49-4820-a69d-b0fd24b2f728">
+
 # トレーニング記録管理機能
 ヘッダーの『トレーニング記録』からトレーニング記録ページに遷移します。<br>
 セット数、回数、重量などのトレーニングデータを入力・保存できます。
 
+https://github.com/yusukeee811/buildnote/assets/132319174/8566ce3c-d6f9-4cb4-8200-d59d64b2dd27
+
 # グラフ機能
 ヘッダーの『グラフ』からグラフページに遷移します。<br>
 トレーニングデータからグラフを作成し、トレーニング成果を可視化することができます。
+
+https://github.com/yusukeee811/buildnote/assets/132319174/77d6b977-0286-40b4-8270-cb89d125d86a
 
 # ユーザー管理機能
 管理者ページのログイン方法（/admin/sign_in) 管理者ページのログインに必要なメールアドレス及びパスワードは下記の通りです。 URLの後ろに/admin/sign_inをつけてください。
@@ -173,6 +179,7 @@ https://github.com/yusukeee811/buildnote/assets/132319174/2188ea64-5d23-4df2-9fb
 
 会員、の一覧や登録内容を確認します。不正な手段で登録した会員や、不適切な投稿を行う会員の利用停止が行えます。
 
+https://github.com/yusukeee811/buildnote/assets/132319174/2a6e2ff9-08ff-40ea-aaf3-8673708ce157
 
 # 使用素材
 - [ロゴジェネレーター](https://www.shopify.com/jp/tools/logo-maker)

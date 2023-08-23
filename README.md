@@ -114,7 +114,7 @@ https://github.com/yusukeee811/buildnote/assets/132319174/4fa9180b-ebf0-4024-860
 
 https://github.com/yusukeee811/buildnote/assets/132319174/6d0aadb9-63c3-4124-a777-9bb356721a5c
 
-# ユーザー検索機能
+# ユーザ検索機能
 ヘッダーの『検索』から知り合いを検索し、フォローできます。
 
 https://github.com/yusukeee811/buildnote/assets/132319174/187705b3-9bfb-4b71-949c-b22665b6899e

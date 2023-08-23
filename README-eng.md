@@ -51,19 +51,19 @@ Individuals engaged in training and exercise.
 - Interacting and sharing information among individuals engaged in training
 
 # Implemented Features
-- 🚪 <b> [Guest Login](#Guest Login) </b> - Allows users to try the application before registering, reducing the registration barrier.
-- 👥 <b> [User Registration](#User Registration) </b> - Clearly identifies the author of posts. Displays customized information such as timelines, follow/follower information for each member.
-- 🔍 <b> [User Search Feature](#User Search Feature) </b> - Users can search for acquaintances and follow them.
-- 🤝 <b> [Follow Feature](#Follow Feature) </b> - Users can follow acquaintances or people who post content of interest to receive the desired information.
-- 📸 <b> [Post Creation](#Post Creation) </b>- Allows members to publish their desired content.
-- ❤  <b> [Like Feature](#Like Feature) </b> - Allows users to react to and bookmark posts they like or want to save.
-- 💕 <b> [Liked Posts List Display](#Liked Posts List Display) </b> - Enables users to view bookmarked posts at any time.
-- 💬 <b> [Comment Feature](#Comment Feature) </b> - Users can react to posts of interest and promote communication.
-- #️⃣ <b> [Post Search (Hashtag Search)](#Post Search (Hashtag Search)) </b> - Enables users to check posts related to topics of interest.
-- 🗓 <b> [Calendar Feature](#Calendar Feature) </b> - Visualizes training days to check if training is being consistently maintained.
-- 📝 <b> [Training Record Management Feature](#Training Record Management Feature) </b> - Users can input and save training data such as sets, repetitions, and weights.
-- 📊 <b> [Graph Feature](#Graph Feature) </b> - Creates graphs from training data to visualize training progress.
-- 👑 <b> [User Management (Admin)](#User Management (Admin)) </b> - Allows administrators to view a list of members and their registration details. Can suspend the usage of members who registered using fraudulent means or engage in inappropriate posts.
+- 🚪 <b> [Guest Login](#guest-login) </b> - Allows users to try the application before registering, reducing the registration barrier.
+- 👥 <b> [User Registration](#user-registration) </b> - Clearly identifies the author of posts. Displays customized information such as timelines, follow/follower information for each member.
+- 🔍 <b> [User Search Feature](#user-search-feature) </b> - Users can search for acquaintances and follow them.
+- 🤝 <b> [Follow Feature](#follow-feature) </b> - Users can follow acquaintances or people who post content of interest to receive the desired information.
+- 📸 <b> [Post Creation](#post-creation) </b>- Allows members to publish their desired content.
+- ❤  <b> [Like Feature](#like-feature) </b> - Allows users to react to and bookmark posts they like or want to save.
+- 💕 <b> [Liked Posts List Display](#liked-posts-list-display) </b> - Enables users to view bookmarked posts at any time.
+- 💬 <b> [Comment Feature](#comment-feature) </b> - Users can react to posts of interest and promote communication.
+- #️⃣ <b> [Post Search (Hashtag Search)](#post-search (hashtag-search)) </b> - Enables users to check posts related to topics of interest.
+- 🗓 <b> [Calendar Feature](#calendar-feature) </b> - Visualizes training days to check if training is being consistently maintained.
+- 📝 <b> [Training Record Management Feature](#training-record-management-feature) </b> - Users can input and save training data such as sets, repetitions, and weights.
+- 📊 <b> [Graph Feature](#graph-feature) </b> - Creates graphs from training data to visualize training progress.
+- 👑 <b> [User Management (Admin)](#user-management (admin)) </b> - Allows administrators to view a list of members and their registration details. Can suspend the usage of members who registered using fraudulent means or engage in inappropriate posts.
 
 # Design
 ## Screen Design

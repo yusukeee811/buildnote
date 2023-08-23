@@ -59,11 +59,11 @@ Individuals engaged in training and exercise.
 - ❤  <b> [Like Feature](#like-feature) </b> - Allows users to react to and bookmark posts they like or want to save.
 - 💕 <b> [Liked Posts List Display](#liked-posts-list-display) </b> - Enables users to view bookmarked posts at any time.
 - 💬 <b> [Comment Feature](#comment-feature) </b> - Users can react to posts of interest and promote communication.
-- #️⃣ <b> [Post Search (Hashtag Search)](#post-search (hashtag-search)) </b> - Enables users to check posts related to topics of interest.
+- #️⃣ <b> [Post Search (Hashtag Search)](#post-search) </b> - Enables users to check posts related to topics of interest.
 - 🗓 <b> [Calendar Feature](#calendar-feature) </b> - Visualizes training days to check if training is being consistently maintained.
 - 📝 <b> [Training Record Management Feature](#training-record-management-feature) </b> - Users can input and save training data such as sets, repetitions, and weights.
 - 📊 <b> [Graph Feature](#graph-feature) </b> - Creates graphs from training data to visualize training progress.
-- 👑 <b> [User Management (Admin)](#user-management (admin)) </b> - Allows administrators to view a list of members and their registration details. Can suspend the usage of members who registered using fraudulent means or engage in inappropriate posts.
+- 👑 <b> [User Management (Admin)](#user-management) </b> - Allows administrators to view a list of members and their registration details. Can suspend the usage of members who registered using fraudulent means or engage in inappropriate posts.
 
 # Design
 ## Screen Design

@@ -144,7 +144,7 @@ You can comment on posts you find interesting and promote communication.
 
 https://github.com/yusukeee811/buildnote/assets/132319174/d348aa7c-c02d-4d46-a451-1e8d2276c03f
 
-# Post Search (Hashtag Search)
+# Post Search
 You can navigate to the '#Search' page from the 'Search' in the header. <br>
 You can check posts related to topics you're interested in.
 
@@ -168,7 +168,7 @@ Create graphs from training data and visualize training progress.
 
 https://github.com/yusukeee811/buildnote/assets/132319174/77d6b977-0286-40b4-8270-cb89d125d86a
 
-# User Management (Admin)
+# User Management
 Login method for the admin page (/admin/sign_in). The email address and password required to log in to the admin page are as follows. Add /admin/sign_in after the URL.
 
 #### email
